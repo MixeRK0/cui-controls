@@ -1,0 +1,24 @@
+<label *ngIf="label" [for]="key" [class]="labelClass">{{label}}</label>
+<div class="row-equal row form-group">
+  <div class="col-9">
+    <label>Выбор на карте</label>
+  </div>
+  <div>
+    <button
+      [title]="'Выбрать на карте'"
+      [class]="'btn btn-secondary icon icon-map btn-lg btn-block'"
+      (click)="OpenModalForEditPolygonOnMap(template)"
+      [disabled]="isDisabled"
+    >
+    </button>
+    <ng-template #template>
+        <cui-ol-rectangle-select
+          [CRS]="CRS"
+          (coordinatesOfRectangleChanged)="ChangeValue($event)"
+          (hideModal)="HideModal()"
+          [coordinatesOfRectangle]="value"
+        >
+        </cui-ol-rectangle-select>
+    </ng-template>
+  </div>
+</div>

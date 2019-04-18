@@ -1,0 +1,62 @@
+<label *ngIf="label" [for]="key" [class]="labelClass">{{label}}</label>
+<div class="row-equal row form-group">
+  <div class="col-10">
+    <div class="input-group">
+      <span class="input-group-text">{{'X'}}</span>
+      <input [id]="longitudeKey"
+             [ngModel]="GetLongitudeValue()"
+             (ngModelChange)="SetLongitudeValue($event)"
+             [ngClass]="GetLongitudeClasses()"
+             [name]="longitudeKey"
+             [placeholder]="placeholder"
+             [tabindex]="tabIndex || 0"
+             cuiValidator
+             decimal
+             [validations]="validationsForSingleProp"
+             [disabled]="isDisabled"
+      />
+      <span class="input-group-text">{{'м'}}</span>
+    </div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">{{'Y'}}</span>
+      </div>
+      <input [id]="latitudeKey"
+             [ngModel]="GetLatitudeValue()"
+             (ngModelChange)="SetLatitudeValue($event)"
+             [ngClass]="GetLatitudeClasses()"
+             [name]="latitudeKey"
+             [placeholder]="placeholder"
+             [tabindex]="tabIndex || 0"
+             cuiValidator
+             decimal
+             [validations]="validationsForSingleProp"
+             [disabled]="isDisabled"
+      />
+      <span class="input-group-text">{{'м'}}</span>
+    </div>
+  </div>
+  <div>
+    <button
+      [title]="'Выбрать на карте'"
+      [class]="'btn btn-secondary icon icon-map btn-lg btn-block'"
+      (click)="OpenModalForSelectCoordinatesOnMap(template)"
+      [disabled]="isDisabled"
+    >
+    </button>
+    <ng-template #template>
+      <dynamic-container [data]="{olSpecialData: olSpecialData, key: key, model: model, changedByUser: changedByUser, modalRef: modalRef}"
+                         [componentClass]="olSpecialData.modalComponent"
+      >
+      </dynamic-container>
+    </ng-template>
+  </div>
+  <div class="invalid-feedback text-left" *ngIf="GetLatitudeControlErrors() || GetLongitudeControlErrors()">
+    <div *ngFor="let validation of availableValidations">
+      <div *ngIf="GetLatitudeControlErrors() && GetLatitudeControlErrors()[validation] ||
+                        GetLongitudeControlErrors() && GetLongitudeControlErrors()[validation]">
+        {{validationMessages[validation].message}}
+      </div>
+    </div>
+  </div>
+</div>

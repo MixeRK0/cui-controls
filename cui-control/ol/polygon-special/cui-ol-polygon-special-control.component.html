@@ -1,0 +1,27 @@
+<label *ngIf="label" [for]="key" [class]="labelClass">{{label}}</label>
+<div class="row-equal row form-group">
+  <div class="col-9">
+    <label>Количество точек: {{GetCountPoints()}}</label>
+  </div>
+  <div>
+    <button
+      [title]="'Выбрать на карте'"
+      [class]="'btn btn-secondary icon icon-map btn-lg btn-block'"
+      (click)="OpenModalForEditPolygonOnMap(template)"
+      [disabled]="isDisabled"
+    >
+    </button>
+    <ng-template #template>
+        <dynamic-container
+                [data]="{
+                    olSpecialData: olSpecialData,
+                    CRS: CRS,
+                    key: key, value: value, changedByUser: changedByUser,
+                    modalRef: modalRef
+                }"
+                [componentClass]="olSpecialData.modalComponent"
+        >
+        </dynamic-container>
+    </ng-template>
+  </div>
+</div>
