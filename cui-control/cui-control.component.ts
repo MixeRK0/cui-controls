@@ -16,7 +16,7 @@ export class CuiControlComponent implements OnInit {
 
   @Input() public model: object = {};
 
-  @Input() public validations: = [];
+  @Input() public validations = [];
 
   @Input() public label = null;
 

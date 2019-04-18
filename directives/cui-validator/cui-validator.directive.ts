@@ -1,6 +1,6 @@
 import {Directive, Input} from '@angular/core';
 import {AbstractControl, NG_VALIDATORS, Validator} from '@angular/forms';
-import {VALIDATIONS} from '../../shared/helpers/form.helper';
+import {VALIDATIONS} from "../../services/cui/form.helper";
 
 export interface ValidationErrors {
   [key: string]: {message: string};

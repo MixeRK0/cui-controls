@@ -4,7 +4,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CuiTextControlComponent} from './text/cui-text-control.component';
 import {CuiCheckboxControlComponent} from './checkbox/cui-checkbox-control.component';
 import {CuiFileControlComponent} from './file/cui-file-control.component';
-import {DecimalDirective} from '../../directives/comma-to-point/comma-to-point.directive';
 import {CuiDecimalControlComponent} from './decimal/cui-decimal-control.component';
 import {CuiControlComponent} from './cui-control.component';
 import {CuiDatepickerControlComponent} from './datepicker/cui-datepicker-control.component';
@@ -21,7 +20,6 @@ import {CuiOlLineControlComponent} from './ol/line/cui-ol-line-control.component
 import {NgSelectModule} from '@ng-select/ng-select';
 import {CuiPasswordControlComponent} from './password/cui-password-control.component';
 import {CuiEmailControlComponent} from './email/cui-email-control.component';
-import {DynamicContainerModule} from '@shared/dynamic-container/dynamic-container.module';
 import {CuiModelHelper} from "../services/cui/cui.helper";
 import {CuiOlRectangleControlComponent} from "./ol/rectangle/cui-ol-rectangle-control.component";
 import {CuiOlPolygonSpecialControlComponent} from "./ol/polygon-special/cui-ol-polygon-special-control.component";
@@ -33,6 +31,7 @@ import {CuiOlRectangleSelectComponent} from "./ol/rectangle/select/cui-ol-rectan
 import {CuiOlPolygonSelectComponent} from "./ol/polygon/select/cui-ol-polygon-select.component";
 import {CuiOlLineSelectComponent} from "./ol/line/select/cui-ol-line-select.component";
 import {DirectivesModule} from "../directives/directives.module";
+import {DynamicContainerModule} from "../cui-data/dynamic-container/dynamic-container.module";
 
 @NgModule({
   imports: [

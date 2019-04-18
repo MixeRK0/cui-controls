@@ -1,5 +1,5 @@
 import {Directive, ElementRef, HostListener} from '@angular/core';
-import * as ASCII from '../../shared/helpers/ascci.helper';
+import * as ASCII from "../../services/cui/ascci.helper";
 
 @Directive({
   selector: '[decimal]'
