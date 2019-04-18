@@ -1,0 +1,30 @@
+{
+  "name": "cui-controls",
+  "version": "1.0.0",
+  "description": "Package with CDK for Angular 2+",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MixeRK0/cui-controls.git"
+  },
+  "keywords": [
+    "angular",
+    "2",
+    "angular",
+    "cdk",
+    "angular",
+    "cdk",
+    "angular",
+    "2",
+    "cdk"
+  ],
+  "author": "I.A. Kochergin, N.S. Arhangelski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MixeRK0/cui-controls/issues"
+  },
+  "homepage": "https://github.com/MixeRK0/cui-controls#readme"
+}
