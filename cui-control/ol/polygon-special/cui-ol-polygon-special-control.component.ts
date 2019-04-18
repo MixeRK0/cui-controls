@@ -2,10 +2,9 @@ import {Component, Input, QueryList, TemplateRef, ViewChildren} from '@angular/c
 import {NgModel} from '@angular/forms';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 import {CuiControlComponent} from '../../cui-control.component';
-import {CuiModelHelper} from '../../../../services/cui/cui.helper';
-import {Coordinate} from '../../../cui-data';
-import {CoordinateReferenceSystemOutput} from '../../../../services/prizma-server-front-api';
-import {DynamicContainerComponent} from '@shared/dynamic-container/dynamic-container.component';
+import {CoordinateReferenceSystem} from "../line/cui-ol-line-control.component";
+import {DynamicContainerComponent} from "../../../cui-data/dynamic-container/dynamic-container.component";
+import {CuiModelHelper} from "../../../services/cui/cui.helper";
 
 @Component({
   selector: 'cui-ol-polygon-special-control',
@@ -16,7 +15,7 @@ export class CuiOlPolygonSpecialControlComponent extends CuiControlComponent {
   public inputs: QueryList<NgModel>;
 
   @Input()
-  public CRS: CoordinateReferenceSystemOutput;
+  public CRS: CoordinateReferenceSystem;
 
   @Input()
   public olSpecialData: any;

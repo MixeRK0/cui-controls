@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {CuiControlComponent} from '../cui-control.component';
-import {CuiModelHelper} from '../../../services/cui/cui.helper';
+import {CuiModelHelper} from "../../services/cui/cui.helper";
 
 @Component({
   selector: 'cui-text-control',

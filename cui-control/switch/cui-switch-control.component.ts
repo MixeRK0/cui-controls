@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CuiControlComponent} from '../cui-control.component';
-import {CuiModelHelper} from '../../../services/cui/cui.helper';
 import {FormGroup} from '@angular/forms';
+import {CuiModelHelper} from "../../services/cui/cui.helper";
 
 @Component({
     selector: 'cui-switch-control',

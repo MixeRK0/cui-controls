@@ -4,7 +4,7 @@ import {AbstractControl, FormGroup} from '@angular/forms';
 
 import {TypeaheadMatch} from 'ngx-bootstrap';
 import {mergeMap} from 'rxjs/internal/operators';
-import {CuiModelHelper} from '@services/cui/cui.helper';
+import {CuiModelHelper} from "../../services/cui/cui.helper";
 
 @Component({
   selector: 'cui-typeahead-control',

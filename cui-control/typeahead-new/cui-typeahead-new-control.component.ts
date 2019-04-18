@@ -1,10 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {CuiControlComponent} from '../cui-control.component';
-import {CuiModelHelper} from '@services/cui/cui.helper';
 import {Observable} from 'rxjs/Rx';
 import {of, Subject} from 'rxjs/index';
-import {ComponentForDynamicInsert} from '@shared/dynamic-container/dynamic-container.component';
 import {share} from 'rxjs/operators';
+import {ComponentForDynamicInsert} from "../../cui-data/dynamic-container/dynamic-container.component";
+import {CuiModelHelper} from "../../services/cui/cui.helper";
 
 @Component({
   selector: 'cui-typeahead-new-control',

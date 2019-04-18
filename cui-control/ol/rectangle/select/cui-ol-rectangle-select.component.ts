@@ -21,14 +21,14 @@ import Map from 'ol/Map';
 import {register} from 'ol/proj/proj4';
 import {Stroke, Style, Fill} from 'ol/style.js';
 import {Modify, Draw, Snap} from 'ol/interaction';
-import {CoordinateReferenceSystemOutput} from '@services/prizma-server-front-api';
 import proj4 from 'proj4';
 import GeoJSON from 'ol/format/GeoJSON';
 import {defaults as defaultControls, FullScreen} from 'ol/control.js';
-import {CuiModelHelper} from '@services/cui/cui.helper';
-import {CuiInputComponent} from '@components/cui-input/cui-input.component';
 import MousePosition from 'ol/control/MousePosition.js';
 import {createStringXY} from 'ol/coordinate.js';
+import {CuiControlComponent} from "../../../cui-control.component";
+import {CoordinateReferenceSystem} from "../../line/cui-ol-line-control.component";
+import {CuiModelHelper} from "../../../../services/cui/cui.helper";
 
 const LINE_COLOR = 'black';
 const POLYGON = 'Polygon';
@@ -38,12 +38,12 @@ const POLYGON = 'Polygon';
   templateUrl: './cui-ol-rectangle-select.component.html',
   styleUrls: ['../../../../../../../src/scss/full-screen-map.css'],
 })
-export class CuiOlRectangleSelectComponent extends CuiInputComponent implements OnInit, AfterViewInit, OnChanges {
+export class CuiOlRectangleSelectComponent extends CuiControlComponent implements OnInit, AfterViewInit, OnChanges {
   @ViewChild('mapElement') mapElement: ElementRef;
 
   @Input() public coordinatesOfRectangle: any;
 
-  @Input() public CRS: CoordinateReferenceSystemOutput;
+  @Input() public CRS: CoordinateReferenceSystem;
 
   @Output() public coordinatesOfRectangleChanged = new EventEmitter<any>();
   @Output() public hideModal = new EventEmitter<boolean>();

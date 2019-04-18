@@ -2,9 +2,9 @@ import {Component, Input, QueryList, TemplateRef, ViewChildren} from '@angular/c
 import {NgModel} from '@angular/forms';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 import {CuiControlComponent} from '../../cui-control.component';
-import {CuiModelHelper} from '../../../../services/cui/cui.helper';
 import {Coordinate} from '../../../cui-data';
-import {CoordinateReferenceSystemOutput} from '../../../../services/prizma-server-front-api';
+import {CuiModelHelper} from "../../../services/cui/cui.helper";
+import {CoordinateReferenceSystem} from "../line/cui-ol-line-control.component";
 
 @Component({
   selector: 'cui-ol-polygon-control',
@@ -13,7 +13,7 @@ import {CoordinateReferenceSystemOutput} from '../../../../services/prizma-serve
 export class CuiOlPolygonControlComponent extends CuiControlComponent {
   @ViewChildren(NgModel) public inputs: QueryList<NgModel>;
 
-  @Input() public CRS: CoordinateReferenceSystemOutput;
+  @Input() public CRS: CoordinateReferenceSystem;
 
   private modalRef: BsModalRef;
 

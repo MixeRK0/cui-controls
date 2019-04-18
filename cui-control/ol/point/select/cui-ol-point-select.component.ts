@@ -13,14 +13,14 @@ import MapBrowserEvent from 'ol/MapBrowserEvent'
 import {Y_KEY, X_KEY, Z_KEY} from '../cui-ol-point-control.component';
 import {BsModalRef} from 'ngx-bootstrap';
 import {CuiControlComponent} from '../../../cui-control.component';
-import {CoordinateReferenceSystemOutput} from '../../../../../services/prizma-server-front-api';
 import proj4 from 'proj4';
 import {register} from 'ol/proj/proj4';
 import {Coordinate} from '../../../../cui-data';
-import {CuiModelHelper} from '../../../../../services/cui/cui.helper';
 import {defaults as defaultControls, FullScreen, ScaleLine} from 'ol/control.js';
 import MousePosition from 'ol/control/MousePosition.js';
 import {createStringXY} from 'ol/coordinate.js';
+import {CoordinateReferenceSystem} from "../../line/cui-ol-line-control.component";
+import {CuiModelHelper} from "../../../../services/cui/cui.helper";
 
 let point: Coordinate;
 let pointLayer: VectorLayer;
@@ -36,7 +36,7 @@ export class CuiOlPointSelectComponent extends CuiControlComponent implements On
 
   @Input() modalRef: BsModalRef;
 
-  @Input() CRS: CoordinateReferenceSystemOutput;
+  @Input() CRS: CoordinateReferenceSystem;
 
   @Output()
   public coordinatesOfPointChanged = new EventEmitter<any>();

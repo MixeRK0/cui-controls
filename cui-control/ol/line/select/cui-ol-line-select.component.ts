@@ -12,13 +12,14 @@ import {register} from 'ol/proj/proj4';
 import {Stroke, Style} from 'ol/style.js';
 import {Modify, Draw, Snap} from 'ol/interaction';
 import {click} from 'ol/events/condition.js';
-import {CoordinateReferenceSystemOutput} from '@services/prizma-server-front-api';
 import proj4 from 'proj4';
 import GeoJSON from 'ol/format/GeoJSON';
 import {defaults as defaultControls, FullScreen} from 'ol/control.js';
 import MousePosition from 'ol/control/MousePosition.js';
 import {createStringXY} from 'ol/coordinate.js';
-import {Coordinate} from '@components/cui-data';
+import {CoordinateReferenceSystem} from "../cui-ol-line-control.component";
+
+export type Coordinate = [number, number, number | undefined]
 
 const LINE_COLOR = 'black';
 const LINE_STRING = 'LineString';
@@ -33,7 +34,7 @@ export class CuiOlLineSelectComponent implements OnInit, AfterViewInit {
 
   @Input() public coordinatesOfLine: Coordinate[];
 
-  @Input() public CRS: CoordinateReferenceSystemOutput;
+  @Input() public CRS: CoordinateReferenceSystem;
 
   @Output() public coordinatesOfLineChanged = new EventEmitter<Coordinate[]>();
   @Output() public hideModal = new EventEmitter<boolean>();

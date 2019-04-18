@@ -3,10 +3,9 @@ import {NgModel} from '@angular/forms';
 import {ValidationErrors} from '@angular/forms/src/directives/validators';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 import {CuiControlComponent} from '../../cui-control.component';
-import {CuiModelHelper} from '../../../../services/cui/cui.helper';
-import {CoordinateReferenceSystemOutput} from '../../../../services/prizma-server-front-api';
-import {DECIMAL, VALIDATIONS} from '../../../../shared/helpers/form.helper';
-import {DynamicContainerComponent} from '@shared/dynamic-container/dynamic-container.component';
+import {CoordinateReferenceSystem} from "../line/cui-ol-line-control.component";
+import {DynamicContainerComponent} from "../../../cui-data/dynamic-container/dynamic-container.component";
+import {CuiModelHelper} from "../../../services/cui/cui.helper";
 
 export const Y_KEY = 'y';
 export const X_KEY = 'x';
@@ -24,7 +23,7 @@ export class CuiOlPointSpecialControlComponent extends CuiControlComponent imple
   public olSpecialData: any;
 
   @Input()
-  public CRS: CoordinateReferenceSystemOutput;
+  public CRS: CoordinateReferenceSystem;
 
   @Input()
   public modalComponent: DynamicContainerComponent;
@@ -36,7 +35,7 @@ export class CuiOlPointSpecialControlComponent extends CuiControlComponent imple
 
   public point: {x: number, y: number, z: number} = {x: 0, y: 0, z: 0};
 
-  public validationsForSingleProp = [VALIDATIONS[DECIMAL]];
+  public validationsForSingleProp = [];
 
   public get latitudeInput(): NgModel | null {
     if (!this.inputs) {

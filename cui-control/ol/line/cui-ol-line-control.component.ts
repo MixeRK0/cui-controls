@@ -2,9 +2,15 @@ import {Component, Input, QueryList, TemplateRef, ViewChildren} from '@angular/c
 import {NgModel} from '@angular/forms';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 import {CuiControlComponent} from '../../cui-control.component';
-import {CuiModelHelper} from '../../../../services/cui/cui.helper';
 import {Coordinate} from '../../../cui-data';
-import {CoordinateReferenceSystemOutput} from '../../../../services/prizma-server-front-api';
+import {CuiModelHelper} from "../../../services/cui/cui.helper";
+
+export interface CoordinateReferenceSystem {
+    name?: string;
+    description?: string;
+    code?: string;
+    proj4?: string;
+}
 
 @Component({
   selector: 'cui-ol-line-control',
@@ -13,7 +19,7 @@ import {CoordinateReferenceSystemOutput} from '../../../../services/prizma-serve
 export class CuiOlLineControlComponent extends CuiControlComponent {
   @ViewChildren(NgModel) public inputs: QueryList<NgModel>;
 
-  @Input() public CRS: CoordinateReferenceSystemOutput;
+  @Input() public CRS: CoordinateReferenceSystem;
 
   private modalRef: BsModalRef;
 

@@ -3,10 +3,8 @@ import {NgModel} from '@angular/forms';
 import {ValidationErrors} from '@angular/forms/src/directives/validators';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 import {CuiControlComponent} from '../../cui-control.component';
-import {CuiModelHelper} from '../../../../services/cui/cui.helper';
-import {CoordinateReferenceSystemOutput} from '../../../../services/prizma-server-front-api';
-import {DECIMAL, VALIDATIONS} from '../../../../shared/helpers/form.helper';
-import {Coordinate} from '@components/cui-data';
+import {CoordinateReferenceSystem} from "../line/cui-ol-line-control.component";
+import {CuiModelHelper} from "../../../services/cui/cui.helper";
 
 export const Y_KEY = 'y';
 export const X_KEY = 'x';
@@ -21,14 +19,14 @@ export class CuiOlPointControlComponent extends CuiControlComponent implements O
   public inputs: QueryList<NgModel>;
 
   @Input()
-  public CRS: CoordinateReferenceSystemOutput;
+  public CRS: CoordinateReferenceSystem;
 
   public modalRef: BsModalRef;
 
   public latitudeKey;
   public longitudeKey;
 
-  public validationsForSingleProp = [VALIDATIONS[DECIMAL]];
+  public validationsForSingleProp = [];
 
   public get latitudeInput(): NgModel | null {
     if (!this.inputs) {

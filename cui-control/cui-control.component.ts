@@ -1,7 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {AbstractControl, FormGroup, NgModel} from '@angular/forms';
-import {CUI_VALIDATION, VALIDATIONS} from '../../shared/helpers/form.helper';
-import {CuiModelHelper} from '../../services/cui/cui.helper';
+import {CuiModelHelper} from "../services/cui/cui.helper";
 
 @Component({
   selector: 'cui-input',
@@ -17,7 +16,7 @@ export class CuiControlComponent implements OnInit {
 
   @Input() public model: object = {};
 
-  @Input() public validations: CUI_VALIDATION[] = [];
+  @Input() public validations: = [];
 
   @Input() public label = null;
 
@@ -41,7 +40,7 @@ export class CuiControlComponent implements OnInit {
 
   @Input() public errorMessageInTooltip = false;
 
-  @Input() public validationMessages = VALIDATIONS;
+  @Input() public validationMessages;
 
   @Input() public inputClass = 'form-control';
 
