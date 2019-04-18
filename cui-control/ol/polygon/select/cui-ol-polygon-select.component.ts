@@ -17,8 +17,8 @@ import GeoJSON from 'ol/format/GeoJSON';
 import {defaults as defaultControls, FullScreen} from 'ol/control.js';
 import MousePosition from 'ol/control/MousePosition.js';
 import {createStringXY} from 'ol/coordinate.js';
-import {Coordinate} from "../../line/select/cui-ol-line-select.component";
 import {CoordinateReferenceSystem} from "../../line/cui-ol-line-control.component";
+import {Coordinate} from "../../../../cui-data";
 
 const LINE_COLOR = 'black';
 const POLYGON = 'Polygon';

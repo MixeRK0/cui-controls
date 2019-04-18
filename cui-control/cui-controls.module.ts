@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {CuiModelHelper} from '@services/cui/cui.helper';
 import {CuiTextControlComponent} from './text/cui-text-control.component';
 import {CuiCheckboxControlComponent} from './checkbox/cui-checkbox-control.component';
 import {CuiFileControlComponent} from './file/cui-file-control.component';
@@ -23,16 +22,17 @@ import {NgSelectModule} from '@ng-select/ng-select';
 import {CuiPasswordControlComponent} from './password/cui-password-control.component';
 import {CuiEmailControlComponent} from './email/cui-email-control.component';
 import {DynamicContainerModule} from '@shared/dynamic-container/dynamic-container.module';
-import {CuiOlRectangleControlComponent} from '@components/cui-control/ol/rectangle/cui-ol-rectangle-control.component';
-import {CuiOlPolygonSpecialControlComponent} from '@components/cui-control/ol/polygon-special/cui-ol-polygon-special-control.component';
-import {CuiOlPointSpecialControlComponent} from '@components/cui-control/ol/point-special/cui-ol-point-special-control.component';
-import {CuiTypeaheadNewControlComponent} from '@components/cui-control/typeahead-new/cui-typeahead-new-control.component';
-import {CuiOlPolygonControlComponent} from '@components/cui-control/ol/polygon/cui-ol-polygon-control.component';
-import {DirectivesModule} from '../../directives/directives.module';
-import {CuiOlLineSelectComponent} from '@components/cui-control/ol/line/select/cui-ol-line-select.component';
-import {CuiOlPolygonSelectComponent} from '@components/cui-control/ol/polygon/select/cui-ol-polygon-select.component';
-import {CuiOlRectangleSelectComponent} from '@components/cui-control/ol/rectangle/select/cui-ol-rectangle-select.component';
-import {CuiOlPointSelectComponent} from '@components/cui-control/ol/point/select/cui-ol-point-select.component';
+import {CuiModelHelper} from "../services/cui/cui.helper";
+import {CuiOlRectangleControlComponent} from "./ol/rectangle/cui-ol-rectangle-control.component";
+import {CuiOlPolygonSpecialControlComponent} from "./ol/polygon-special/cui-ol-polygon-special-control.component";
+import {CuiOlPolygonControlComponent} from "./ol/polygon/cui-ol-polygon-control.component";
+import {CuiOlPointSpecialControlComponent} from "./ol/point-special/cui-ol-point-special-control.component";
+import {CuiOlPointSelectComponent} from "./ol/point/select/cui-ol-point-select.component";
+import {CuiTypeaheadNewControlComponent} from "./typeahead-new/cui-typeahead-new-control.component";
+import {CuiOlRectangleSelectComponent} from "./ol/rectangle/select/cui-ol-rectangle-select.component";
+import {CuiOlPolygonSelectComponent} from "./ol/polygon/select/cui-ol-polygon-select.component";
+import {CuiOlLineSelectComponent} from "./ol/line/select/cui-ol-line-select.component";
+import {DirectivesModule} from "../directives/directives.module";
 
 @NgModule({
   imports: [

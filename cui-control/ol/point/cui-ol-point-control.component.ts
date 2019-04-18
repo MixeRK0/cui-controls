@@ -5,6 +5,7 @@ import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 import {CuiControlComponent} from '../../cui-control.component';
 import {CoordinateReferenceSystem} from "../line/cui-ol-line-control.component";
 import {CuiModelHelper} from "../../../services/cui/cui.helper";
+import {Coordinate} from "../../../cui-data";
 
 export const Y_KEY = 'y';
 export const X_KEY = 'x';

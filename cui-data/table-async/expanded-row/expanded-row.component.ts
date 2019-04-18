@@ -2,7 +2,7 @@ import {
   AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ComponentFactoryResolver, Input, Type,
   ViewChild
 } from '@angular/core';
-import {ExpandComponentDirective} from '../../../../directives/expand-component';
+import {ExpandComponentDirective} from "../../../directives/expand-component";
 
 @Component({
   selector: 'expanded-row',

@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {DynamicContainerComponent} from '@shared/dynamic-container/dynamic-container.component';
+import {DynamicContainerComponent} from "./dynamic-container.component";
 
 @NgModule({
   imports: [

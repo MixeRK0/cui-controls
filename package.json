@@ -1,6 +1,6 @@
 {
   "name": "cui-controls",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Package with CDK for Angular 2+",
   "main": "index.js",
   "scripts": {

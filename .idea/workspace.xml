@@ -2,34 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8d8dfb0-fd49-4ce1-9013-2f9bb1d91776" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/cui-control/checkbox/cui-checkbox-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/checkbox/cui-checkbox-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/cui-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/cui-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/datepicker/cui-datepicker-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/datepicker/cui-datepicker-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/datetimepicker/cui-datetimepicker-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/datetimepicker/cui-datetimepicker-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/decimal/cui-decimal-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/decimal/cui-decimal-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/email/cui-email-control.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/email/cui-email-control.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/email/cui-email-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/email/cui-email-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/file/cui-file-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/file/cui-file-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/label/cui-label-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/label/cui-label-control.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cui-control/cui-controls.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/cui-controls.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cui-control/ol/line/cui-ol-line-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/ol/line/cui-ol-line-control.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cui-control/ol/line/select/cui-ol-line-select.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/ol/line/select/cui-ol-line-select.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/ol/point-special/cui-ol-point-special-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/ol/point-special/cui-ol-point-special-control.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cui-control/ol/point/cui-ol-point-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/ol/point/cui-ol-point-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/ol/point/select/cui-ol-point-select.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/ol/point/select/cui-ol-point-select.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/ol/polygon-special/cui-ol-polygon-special-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/ol/polygon-special/cui-ol-polygon-special-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/ol/polygon/cui-ol-polygon-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/ol/polygon/cui-ol-polygon-control.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cui-control/ol/polygon/select/cui-ol-polygon-select.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/ol/polygon/select/cui-ol-polygon-select.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/ol/rectangle/cui-ol-rectangle-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/ol/rectangle/cui-ol-rectangle-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/ol/rectangle/select/cui-ol-rectangle-select.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/ol/rectangle/select/cui-ol-rectangle-select.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/password/cui-password-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/password/cui-password-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/select/cui-select-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/select/cui-select-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/switch/cui-switch-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/switch/cui-switch-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/telephone/cui-telephone-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/telephone/cui-telephone-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/text/cui-text-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/text/cui-text-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/timepicker/cui-timepicker-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/timepicker/cui-timepicker-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/typeahead-new/cui-typeahead-new-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/typeahead-new/cui-typeahead-new-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cui-control/typeahead/cui-typeahead-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-control/typeahead/cui-typeahead-control.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cui-data/cell/complex/cui-data-complex-cell.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-data/cell/complex/cui-data-complex-cell.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cui-data/cell/complex/default-view-complex-cell.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-data/cell/complex/default-view-complex-cell.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cui-data/cell/cui-data-cell.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-data/cell/cui-data-cell.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cui-data/cell/cui-data-editable-cell.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-data/cell/cui-data-editable-cell.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cui-data/cell/table-simple/cui-data-table-simple-cell.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-data/cell/table-simple/cui-data-table-simple-cell.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cui-data/dynamic-container/dynamic-container.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-data/dynamic-container/dynamic-container.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cui-data/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-data/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cui-data/table-async/cui-data-table-async.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-data/table-async/cui-data-table-async.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cui-data/table-async/cui-data-table-async.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-data/table-async/cui-data-table-async.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cui-data/table-async/expanded-row/expanded-row.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cui-data/table-async/expanded-row/expanded-row.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,112 +27,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cui-ol-line-select.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cui-control/ol/line/select/cui-ol-line-select.component.ts">
+      <file leaf-file-name="cui-data-read-only-cell.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cui-data/cell/cui-data-read-only-cell.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+            <state relative-caret-position="30">
+              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dynamic-container.module.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cui-data/dynamic-container/dynamic-container.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
               <folding>
-                <element signature="e#0#115#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cui-ol-point-special-control.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cui-control/ol/point-special/cui-ol-point-special-control.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
-              <folding>
-                <element signature="e#0#93#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cui-ol-polygon-control.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cui-control/ol/polygon/cui-ol-polygon-control.component.html">
+      <file leaf-file-name="cui-data-read-only-cell.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cui-data/cell/cui-data-read-only-cell.component.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="cui-ol-polygon-select.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cui-control/ol/polygon/select/cui-ol-polygon-select.component.ts">
+      <file leaf-file-name="cui-data-editable-cell.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cui-data/cell/cui-data-editable-cell.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-243">
-              <caret line="102" column="21" lean-forward="true" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
+            <state relative-caret-position="45">
+              <caret line="3" column="52" lean-forward="true" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cui-data-editable-cell.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cui-data/cell/cui-data-editable-cell.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-165">
+              <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cui-data-cell.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cui-data/cell/cui-data-cell.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
               <folding>
-                <element signature="e#0#115#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cui-ol-polygon-control.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cui-control/ol/polygon/cui-ol-polygon-control.component.ts">
+      <file leaf-file-name="cui-data-table-simple-cell.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cui-data/cell/table-simple/cui-data-table-simple-cell.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="15" column="48" lean-forward="true" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+            <state relative-caret-position="750">
+              <caret line="50" column="59" selection-start-line="50" selection-start-column="59" selection-end-line="50" selection-end-column="59" />
               <folding>
-                <element signature="e#0#85#0" expanded="true" />
+                <element signature="e#0#96#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cui-ol-polygon-special-control.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cui-control/ol/polygon-special/cui-ol-polygon-special-control.component.ts">
+      <file leaf-file-name="cui-data-complex-cell.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cui-data/cell/complex/cui-data-complex-cell.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state>
+              <caret lean-forward="true" />
               <folding>
-                <element signature="e#0#85#0" expanded="true" />
+                <element signature="e#0#90#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cui-ol-rectangle-select.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cui-control/ol/rectangle/select/cui-ol-rectangle-select.component.ts">
+      <file leaf-file-name="default-view-complex-cell.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cui-data/cell/complex/default-view-complex-cell.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1649">
-              <caret line="178" column="10" selection-start-line="178" selection-start-column="10" selection-end-line="178" selection-end-column="10" />
+            <state>
+              <caret lean-forward="true" />
               <folding>
-                <element signature="e#0#163#0" expanded="true" />
+                <element signature="e#0#54#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cui-ol-rectangle-control.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cui-control/ol/rectangle/cui-ol-rectangle-control.component.ts">
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cui-data/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="320">
+              <caret line="113" column="25" lean-forward="true" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
               <folding>
-                <element signature="e#0#85#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cui-control.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cui-control/cui-control.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-723">
-              <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#88#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -154,6 +134,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>DecimalDirective</find>
+      <find>SimpleDataTableConfig</find>
       <find>construc</find>
     </findStrings>
   </component>
@@ -180,17 +162,29 @@
         <option value="$PROJECT_DIR$/cui-control/typeahead/cui-typeahead-control.component.ts" />
         <option value="$PROJECT_DIR$/cui-control/typeahead-new/cui-typeahead-new-control.component.ts" />
         <option value="$PROJECT_DIR$/cui-control/cui-control.component.ts" />
-        <option value="$PROJECT_DIR$/cui-control/ol/line/cui-ol-line-control.component.ts" />
-        <option value="$PROJECT_DIR$/cui-control/ol/line/select/cui-ol-line-select.component.ts" />
         <option value="$PROJECT_DIR$/cui-control/ol/point/select/cui-ol-point-select.component.ts" />
-        <option value="$PROJECT_DIR$/cui-control/ol/point/cui-ol-point-control.component.ts" />
         <option value="$PROJECT_DIR$/cui-control/ol/point-special/cui-ol-point-special-control.component.ts" />
-        <option value="$PROJECT_DIR$/cui-control/ol/polygon/select/cui-ol-polygon-select.component.ts" />
         <option value="$PROJECT_DIR$/cui-control/ol/polygon/cui-ol-polygon-control.component.ts" />
         <option value="$PROJECT_DIR$/cui-control/ol/polygon-special/cui-ol-polygon-special-control.component.ts" />
         <option value="$PROJECT_DIR$/cui-control/ol/rectangle/select/cui-ol-rectangle-select.component.ts" />
         <option value="$PROJECT_DIR$/cui-control/ol/rectangle/cui-ol-rectangle-control.component.ts" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/cui-control/cui-controls.module.ts" />
+        <option value="$PROJECT_DIR$/directives/directives.module.ts" />
+        <option value="$PROJECT_DIR$/cui-control/ol/point/cui-ol-point-control.component.ts" />
+        <option value="$PROJECT_DIR$/cui-control/ol/line/select/cui-ol-line-select.component.ts" />
+        <option value="$PROJECT_DIR$/cui-control/ol/polygon/select/cui-ol-polygon-select.component.ts" />
+        <option value="$PROJECT_DIR$/cui-data/index.ts" />
+        <option value="$PROJECT_DIR$/cui-control/ol/line/cui-ol-line-control.component.ts" />
+        <option value="$PROJECT_DIR$/cui-data/table-async/cui-data-table-async.component.ts" />
+        <option value="$PROJECT_DIR$/cui-data/table-async/cui-data-table-async.module.ts" />
+        <option value="$PROJECT_DIR$/cui-data/table-async/expanded-row/expanded-row.component.ts" />
+        <option value="$PROJECT_DIR$/cui-data/dynamic-container/dynamic-container.module.ts" />
+        <option value="$PROJECT_DIR$/cui-data/cell/cui-data-editable-cell.component.ts" />
+        <option value="$PROJECT_DIR$/cui-data/cell/cui-data-cell.module.ts" />
+        <option value="$PROJECT_DIR$/cui-data/cell/table-simple/cui-data-table-simple-cell.component.ts" />
+        <option value="$PROJECT_DIR$/cui-data/cell/complex/cui-data-complex-cell.component.ts" />
+        <option value="$PROJECT_DIR$/cui-data/cell/complex/default-view-complex-cell.component.ts" />
       </list>
     </option>
   </component>
@@ -399,6 +393,43 @@
               <item name="cui-control" type="462c0819:PsiDirectoryNode" />
               <item name="typeahead-new" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="cui-controls" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cui-controls" type="462c0819:PsiDirectoryNode" />
+              <item name="cui-data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cui-controls" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cui-controls" type="462c0819:PsiDirectoryNode" />
+              <item name="cui-data" type="462c0819:PsiDirectoryNode" />
+              <item name="cell" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cui-controls" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cui-controls" type="462c0819:PsiDirectoryNode" />
+              <item name="cui-data" type="462c0819:PsiDirectoryNode" />
+              <item name="cell" type="462c0819:PsiDirectoryNode" />
+              <item name="complex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cui-controls" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cui-controls" type="462c0819:PsiDirectoryNode" />
+              <item name="cui-data" type="462c0819:PsiDirectoryNode" />
+              <item name="cell" type="462c0819:PsiDirectoryNode" />
+              <item name="table-simple" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cui-controls" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cui-controls" type="462c0819:PsiDirectoryNode" />
+              <item name="cui-data" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic-container" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cui-controls" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cui-controls" type="462c0819:PsiDirectoryNode" />
+              <item name="cui-data" type="462c0819:PsiDirectoryNode" />
+              <item name="table-async" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -433,12 +464,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555593958984</updated>
-      <workItem from="1555593960248" duration="1812000" />
+      <workItem from="1555593960248" duration="4123000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1812000" />
+    <option name="totallyTimeSpent" value="4123000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1606" height="878" extended-state="6" />
@@ -450,15 +481,15 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info id="npm" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32933334" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24967825" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -587,16 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cui-control/text/cui-text-control.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cui-control/timepicker/cui-timepicker-control.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -627,90 +648,13 @@
     <entry file="file://$PROJECT_DIR$/cui-control/ol/point/cui-ol-point-control.component.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cui-control/ol/line/cui-ol-line-control.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cui-control/ol/point/select/cui-ol-point-select.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="46" lean-forward="true" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cui-control/ol/point/cui-ol-point-control.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cui-control/ol/point-special/cui-ol-point-special-control.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-320" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cui-control/ol/point-special/cui-ol-point-special-control.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
-          <folding>
-            <element signature="e#0#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cui-control/ol/polygon/cui-ol-polygon-control.component.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cui-control/ol/line/select/cui-ol-line-select.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cui-control/ol/polygon/select/cui-ol-polygon-select.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-243">
-          <caret line="102" column="21" lean-forward="true" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cui-control/ol/polygon/cui-ol-polygon-control.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="15" column="48" lean-forward="true" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cui-control/ol/polygon-special/cui-ol-polygon-special-control.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cui-control/ol/rectangle/select/cui-ol-rectangle-select.component.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -725,19 +669,9 @@
     <entry file="file://$PROJECT_DIR$/cui-control/ol/rectangle/cui-ol-rectangle-control.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="e#0#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cui-control/cui-control.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-723">
-          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#88#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -746,6 +680,239 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-control/text/cui-text-control.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-control/cui-control.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-723">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/directives/directives.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-control/cui-controls.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="36" column="11" lean-forward="true" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-control/ol/line/select/cui-ol-line-select.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="108" column="21" lean-forward="true" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-control/ol/point/select/cui-ol-point-select.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-control/ol/point/cui-ol-point-control.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1965">
+          <caret line="131" column="25" selection-start-line="131" selection-start-column="25" selection-end-line="131" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-control/ol/point-special/cui-ol-point-special-control.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1830">
+          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+          <folding>
+            <element signature="e#0#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-control/ol/polygon/select/cui-ol-polygon-select.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#0#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-control/ol/polygon/cui-ol-polygon-control.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-control/ol/polygon-special/cui-ol-polygon-special-control.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-control/ol/line/cui-ol-line-control.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-data/table-async/cui-data-table-async.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-data/table-async/cui-data-table-async.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-data/table-async/expanded-row/expanded-row.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-data/dynamic-container/dynamic-container.component.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-data/cell/table-simple/cui-data-table-simple-cell.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-data/table-async/cui-data-table-async.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-data/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="113" column="25" lean-forward="true" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-data/cell/cui-data-editable-cell.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="52" lean-forward="true" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-data/cell/cui-data-editable-cell.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-165">
+          <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-data/cell/cui-data-read-only-cell.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-data/cell/cui-data-cell.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-data/cell/table-simple/cui-data-table-simple-cell.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="59" selection-start-line="50" selection-start-column="59" selection-end-line="50" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-data/cell/complex/cui-data-complex-cell.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#0#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-data/cell/complex/default-view-complex-cell.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-data/cell/cui-data-read-only-cell.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cui-data/dynamic-container/dynamic-container.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

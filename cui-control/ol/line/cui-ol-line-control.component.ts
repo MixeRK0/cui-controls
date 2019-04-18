@@ -6,10 +6,13 @@ import {Coordinate} from '../../../cui-data';
 import {CuiModelHelper} from "../../../services/cui/cui.helper";
 
 export interface CoordinateReferenceSystem {
+    id?: number;
     name?: string;
     description?: string;
     code?: string;
     proj4?: string;
+    created_at?: string;
+    updated_at?: string;
 }
 
 @Component({

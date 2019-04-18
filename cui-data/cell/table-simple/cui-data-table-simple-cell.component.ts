@@ -1,7 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from '@angular/core';
-import {Property} from '../../index';
-import {EditableProperty} from '@components/cui-data';
-import {CuiModelHelper} from '@services/cui/cui.helper';
+import {EditableProperty, Property} from '../../index';
+import {CuiModelHelper} from "../../../services/cui/cui.helper";
 
 export interface SimpleDataTableCellConfig<TYPE> {
   properties: Property<TYPE>[],

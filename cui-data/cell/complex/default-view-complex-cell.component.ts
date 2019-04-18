@@ -1,7 +1,7 @@
 import {Component, EventEmitter} from '@angular/core';
-import {Property} from '@components/cui-data';
-import {ComponentForDynamicInsert} from '@shared/dynamic-container/dynamic-container.component';
-import {CuiModelHelper} from '@services/cui/cui.helper';
+import {ComponentForDynamicInsert} from "../../dynamic-container/dynamic-container.component";
+import {Property} from "../../index";
+import {CuiModelHelper} from "../../../services/cui/cui.helper";
 
 @Component({
   selector: 'default-view-cell',

@@ -18,8 +18,7 @@ import {defaults as defaultControls, FullScreen} from 'ol/control.js';
 import MousePosition from 'ol/control/MousePosition.js';
 import {createStringXY} from 'ol/coordinate.js';
 import {CoordinateReferenceSystem} from "../cui-ol-line-control.component";
-
-export type Coordinate = [number, number, number | undefined]
+import {Coordinate} from "../../../../cui-data";
 
 const LINE_COLOR = 'black';
 const LINE_STRING = 'LineString';

@@ -1,11 +1,9 @@
 import {Observable} from 'rxjs';
-import {CUI_VALIDATION} from '@shared/helpers/form.helper';
-import {CoordinateReferenceSystemOutput} from '@services/prizma-server-front-api';
-import {IOption} from '../cui-input/select/cui-select.component';
-import {ComponentForDynamicInsert} from '@shared/dynamic-container/dynamic-container.component';
 import {Type} from '@angular/core';
-import {DefaultViewComponent} from '@components/cui-data/property/complex/default-view.component';
-import {SimpleDataTableConfig} from '@components/cui-data/property/table-simple/cui-data-table-simple.component';
+import {IOption} from "../cui-control/select/cui-select-control.component";
+import {SimpleDataTableCellConfig} from "./cell/table-simple/cui-data-table-simple-cell.component";
+import {ComponentForDynamicInsert} from "./dynamic-container/dynamic-container.component";
+import {CoordinateReferenceSystem} from "../cui-control/ol/line/cui-ol-line-control.component";
 
 export type TEXT_ELEMENT = 'text';
 export type DECIMAL_ELEMENT = 'decimal';
@@ -99,10 +97,10 @@ interface BaseProperty<TYPE> {
       componentView?: Type<ComponentForDynamicInsert>
     },
     mapData?: {
-      CRS: (item: TYPE) => CoordinateReferenceSystemOutput,
+      CRS: (item: TYPE) => CoordinateReferenceSystem,
     }
     table?: {
-      config: SimpleDataTableConfig<any>,
+      config: SimpleDataTableCellConfig<any>,
       isWithoutLabel?: boolean,
       isEditable?: boolean
     },
@@ -124,12 +122,8 @@ export interface EditableProperty<TYPE> extends BaseProperty<TYPE> {
   is_editable: true,
   key: string,
   inputType: INPUT_TYPE,
-  validations?: CUI_VALIDATION[],
+  validations?: any,
   onUserChange?: (item: TYPE, context?: any) => void
 }
 
 export type Property<TYPE> = EditableProperty<TYPE> | ReadOnlyProperty<TYPE>;
-
-export * from './table/cui-data-table.component';
-export * from './table/cui-data-table.module';
-

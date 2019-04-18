@@ -1,8 +1,8 @@
 import {Component, EventEmitter, Input, OnInit, Output, TemplateRef} from '@angular/core';
-import {EditableProperty, Property} from '@components/cui-data';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap';
-import {DefaultViewComplexCellComponent} from '@components/cui-data/cell/complex/default-view-complex-cell.component';
-import {CuiModelHelper} from '@services/cui/cui.helper';
+import {EditableProperty, Property} from "../../index";
+import {CuiModelHelper} from "../../../services/cui/cui.helper";
+import {DefaultViewComplexCellComponent} from "./default-view-complex-cell.component";
 
 @Component({
   selector: 'cui-data-complex-cell',

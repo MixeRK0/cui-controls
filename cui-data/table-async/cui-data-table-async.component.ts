@@ -4,12 +4,12 @@ import {
 } from '@angular/core';
 import {Observable, Subject} from 'rxjs';
 import {Button, DataTable, EditableProperty, Property} from '../index';
-import {CuiFormHelper} from '@services/cui/cui-form.helper';
 import {Router} from '@angular/router';
 import {HttpHeaders, HttpResponse} from '@angular/common/http';
-import {CuiModelHelper} from '@services/cui/cui.helper';
 import {hasOwnProperty} from 'tslint/lib/utils';
 import {share} from 'rxjs/operators';
+import {CuiFormHelper} from "../../services/cui/cui-form.helper";
+import {CuiModelHelper} from "../../services/cui/cui.helper";
 
 export function MapResponseToListAndSummaryData(response: HttpResponse<any>): ListAndSummaryData<any> {
   const headers: HttpHeaders = response.headers;

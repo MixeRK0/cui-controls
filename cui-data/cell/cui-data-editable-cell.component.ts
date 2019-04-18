@@ -1,11 +1,11 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {EditableProperty} from '../index';
-import {CuiInputComponent} from '../../cui-input/cui-input.component';
 import {Observable} from 'rxjs/Rx';
-import {IOption} from '@components/cui-input/select/cui-select.component';
 import {async} from 'rxjs/internal/scheduler/async';
 import {of} from 'rxjs/internal/observable/of';
-import {CuiModelHelper} from '@services/cui/cui.helper';
+import {IOption} from "../../cui-control/select/cui-select-control.component";
+import {CuiModelHelper} from "../../services/cui/cui.helper";
+import {CuiControlComponent} from "../../cui-control/cui-control.component";
 
 @Component({
   selector: 'cui-data-editable-cell',
@@ -13,8 +13,8 @@ import {CuiModelHelper} from '@services/cui/cui.helper';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CuiDataEditableCellComponent<TYPE> implements OnInit {
-  @ViewChild(CuiInputComponent)
-  public cuiInput: CuiInputComponent;
+  @ViewChild(CuiControlComponent)
+  public cuiInput: CuiControlComponent;
 
   @Input() public property: EditableProperty<TYPE>;
 
