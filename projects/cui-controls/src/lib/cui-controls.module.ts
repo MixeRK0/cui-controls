@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {CuiControlsLibComponent} from './cui-controls-lib.component';
+import {CuiControlsComponent} from './cui-controls.component';
 import {CuiOlPointSpecialControlComponent} from "./cui-control/ol/point-special/cui-ol-point-special-control.component";
 import {CuiOlPolygonControlComponent} from "./cui-control/ol/polygon/cui-ol-polygon-control.component";
 import {CuiDatepickerControlComponent} from "./cui-control/datepicker/cui-datepicker-control.component";
@@ -58,7 +58,7 @@ import {DynamicContainerComponent} from "./cui-data/dynamic-container/dynamic-co
         PaginationModule.forRoot(),
     ],
     declarations: [
-        CuiControlsLibComponent,
+        CuiControlsComponent,
         CuiControlComponent,
         CuiTextControlComponent,
         CuiCheckboxControlComponent,
@@ -100,7 +100,7 @@ import {DynamicContainerComponent} from "./cui-data/dynamic-container/dynamic-co
         DynamicContainerComponent
     ],
     exports: [
-        CuiControlsLibComponent,
+        CuiControlsComponent,
         CuiControlComponent,
         CuiTextControlComponent,
         CuiCheckboxControlComponent,
@@ -142,4 +142,4 @@ import {DynamicContainerComponent} from "./cui-data/dynamic-container/dynamic-co
         BsModalService
     ]
 })
-export class CuiControlsLibModule { }
+export class CuiControlsModule { }

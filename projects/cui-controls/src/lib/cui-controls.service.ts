@@ -3,6 +3,6 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class CuiControlsLibService {
+export class CuiControlsService {
   constructor() { }
 }

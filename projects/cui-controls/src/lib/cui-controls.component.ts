@@ -6,10 +6,9 @@ import {Component} from '@angular/core';
       <p>
         cui-controls works!
       </p>
-      <cui-switch-control></cui-switch-control>
   `,
   styles: []
 })
-export class CuiControlsLibComponent{
+export class CuiControlsComponent{
   constructor() { }
 }

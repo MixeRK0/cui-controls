@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CuiControlsLibComponent } from './cui-controls-lib.component';
+import { CuiControlsComponent } from './cui-controls.component';
 
-describe('CuiControlsLibComponent', () => {
-  let component: CuiControlsLibComponent;
-  let fixture: ComponentFixture<CuiControlsLibComponent>;
+describe('CuiControlsComponent', () => {
+  let component: CuiControlsComponent;
+  let fixture: ComponentFixture<CuiControlsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CuiControlsLibComponent ]
+      declarations: [ CuiControlsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CuiControlsLibComponent);
+    fixture = TestBed.createComponent(CuiControlsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
