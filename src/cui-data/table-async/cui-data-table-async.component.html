@@ -35,25 +35,25 @@
 </div>
 <div [class]="this.config.isResponsive ? 'table-responsive' : ''">
   <table class="table">
-      <tr>
-        <th *ngFor="let property of config.properties; index as i"
-            [width]="property.width"
-            [class]="ResolveTableHeaderColumnClass(property.enableSort, i)"
-            (click)="ResolveTableHeaderColumnClick(property, i)"
+    <tr>
+      <th *ngFor="let property of config.properties; index as i"
+          [width]="property.width"
+          [class]="ResolveTableHeaderColumnClass(property.enableSort, i)"
+          (click)="ResolveTableHeaderColumnClick(property, i)"
+      >
+        <div class="col-12">
+          {{property.label + ResolveUnitPostfix(property)}}
+        </div>
+      </th>
+      <th class="border text-center" *ngIf="IsNeedDrawButtonColumns()" [attr.colspan]="CountButtons()">
+        <a *ngIf="config.isEnableSort"
+           class="btn btn-link icon-close"
+           (click)="ClearSortData()"
+           title="Сбросить настройки сортировки"
         >
-          <div class="col-12">
-              {{property.label + ResolveUnitPostfix(property)}}
-          </div>
-        </th>
-        <th class="p-2 border text-center" *ngIf="IsNeedDrawButtonColumns()" [attr.colspan]="CountButtons()">
-          <button *ngIf="config.isEnableSort"
-                class="btn btn-sm btn-danger icon-close"
-                (click)="ClearSortData()"
-                title="Сбросить настройки сортировки"
-          >
-          </button>
-        </th>
-      </tr>
+        </a>
+      </th>
+    </tr>
     <ng-template [ngIf]="isLoadingRows" [ngIfElse]="loadedRows">
       <tr>
         <td class="border" [attr.colspan]="config.properties.length + 1">Загрузка данных...</td>
@@ -81,20 +81,20 @@
             <ng-template [ngIf]="IsAvailableViewExpand()">
               <td class="button-cell border">
                 <button
-                  *ngIf="IsClosedRow(i)"
-                  [title]="'Подробнее'"
-                  [class]="'btn btn-info icon icon-eye btn-sm'"
-                  [disabled]="isLoadingRows || IsDisabledExpandForRow(item)"
-                  (click)="ExpandRow(i)"
+                        *ngIf="IsClosedRow(i)"
+                        [title]="'Подробнее'"
+                        [class]="'btn btn-info icon icon-eye btn-sm'"
+                        [disabled]="isLoadingRows || IsDisabledExpandForRow(item)"
+                        (click)="ExpandRow(i)"
                 >
                 </button>
 
                 <button
-                  *ngIf="IsExpandedRow(i)"
-                  [title]="'Скрыть подробную информацию'"
-                  [class]="'btn btn-info icon icon-check btn-sm'"
-                  [disabled]="isLoadingRows"
-                  (click)="CloseRow(i)"
+                        *ngIf="IsExpandedRow(i)"
+                        [title]="'Скрыть подробную информацию'"
+                        [class]="'btn btn-info icon icon-check btn-sm'"
+                        [disabled]="isLoadingRows"
+                        (click)="CloseRow(i)"
                 >
                 </button>
               </td>
@@ -103,10 +103,10 @@
             <ng-template [ngIf]="IsAvailableDelete()">
               <td class="button-cell border">
                 <button
-                  [title]="'Удалить'"
-                  [class]="'btn btn-danger icon icon-trash btn-sm'"
-                  [disabled]="isLoadingRows"
-                  (click)="DeleteItem(item)"
+                        [title]="'Удалить'"
+                        [class]="'btn btn-danger icon icon-trash btn-sm'"
+                        [disabled]="isLoadingRows"
+                        (click)="DeleteItem(item)"
                 >
                 </button>
               </td>
@@ -115,10 +115,10 @@
             <ng-template [ngIf]="IsAvailableSave() && !IsAvailableAutoSave()">
               <td class="button-cell border">
                 <button
-                  [title]="'Сохранить'"
-                  [class]="'btn btn-success icon icon-check btn-sm'"
-                  [disabled]="isLoadingRows"
-                  (click)="SaveItem(i)"
+                        [title]="'Сохранить'"
+                        [class]="'btn btn-success icon icon-check btn-sm'"
+                        [disabled]="isLoadingRows"
+                        (click)="SaveItem(i)"
                 >
                 </button>
               </td>

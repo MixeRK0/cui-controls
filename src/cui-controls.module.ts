@@ -137,6 +137,9 @@ import {CuiDataTableAsyncComponent} from './cui-data';
         CuiModelHelper,
         CuiFormHelper,
         BsModalService
+    ],
+    entryComponents: [
+      DefaultViewComplexCellComponent
     ]
 })
 export class CuiControlsModule { }
