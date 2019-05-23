@@ -47,7 +47,7 @@ export class CuiControlComponent implements OnInit {
 
   @Output() public changedByUser = new EventEmitter<any>();
 
-  public availableValidations = [];
+  public availableValidations = Object.keys(this.validationMessages);
 
   public formGroupWithUpdateOnBlur = new FormGroup({}, {updateOn: 'blur'});
 
@@ -88,14 +88,6 @@ export class CuiControlComponent implements OnInit {
     }
 
     let errorMessage = '';
-
-    if (control.errors !== null) {
-      for (const errorKey in control.errors) {
-        if (typeof control.errors[errorKey] === 'object' && 'message' in control.errors[errorKey] || control.errors[errorKey]) {
-          errorMessage += control.errors[errorKey]['message'];
-        }
-      }
-    }
 
     for (const validation of this.availableValidations) {
       if (control.errors[validation]) {
