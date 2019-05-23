@@ -36,7 +36,7 @@ export class CuiDataTableSimpleCellComponent<TYPE> implements OnInit {
 
   @Output() public changedByUser = new EventEmitter<any>();
 
-  public list;
+  public list = [];
 
   public innerModel: TYPE;
 
