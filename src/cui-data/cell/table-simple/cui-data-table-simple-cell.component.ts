@@ -34,6 +34,8 @@ export class CuiDataTableSimpleCellComponent<TYPE> implements OnInit {
 
   @Input() public IsWithoutLabel = false;
 
+  @Input() public isNeedUnitLabelForHeaders;
+
   @Output() public changedByUser = new EventEmitter<any>();
 
   public list = [];
@@ -45,6 +47,10 @@ export class CuiDataTableSimpleCellComponent<TYPE> implements OnInit {
   ngOnInit() {
     if (this.isEditable === undefined) {
       this.isEditable = true;
+    }
+
+    if (this.isNeedUnitLabelForHeaders === undefined) {
+      this.isNeedUnitLabelForHeaders = true;
     }
   }
 
@@ -73,7 +79,7 @@ export class CuiDataTableSimpleCellComponent<TYPE> implements OnInit {
   }
 
   ResolveUnitPostfix(property: Property<TYPE>) {
-    if (!property.is_editable) {
+    if (!this.isNeedUnitLabelForHeaders) {
       return '';
     }
 
