@@ -102,7 +102,8 @@ export interface BaseProperty<TYPE> {
     table?: {
       config: SimpleDataTableCellConfig<any>,
       isWithoutLabel?: boolean,
-      isEditable?: boolean
+      isEditable?: boolean,
+      isNeedUnitLabelForHeaders?: boolean
     },
     olSpecialData?: (item: TYPE) => {
       modalComponent: ComponentForDynamicInsert,
