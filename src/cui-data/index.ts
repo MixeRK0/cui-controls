@@ -94,7 +94,9 @@ export interface BaseProperty<TYPE> {
       innerProperties: (item: TYPE) => Property<TYPE>[],
       labelCol?: colValues,
       inputCol?: colValues,
-      componentView?: Type<ComponentForDynamicInsert>
+      componentView?: Type<ComponentForDynamicInsert>,
+      inTable?: boolean,
+      isNeedUnitInHeader?: boolean
     },
     mapData?: {
       CRS: (item: TYPE) => CoordinateReferenceSystem,

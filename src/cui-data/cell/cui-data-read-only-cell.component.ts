@@ -10,6 +10,7 @@ export class CuiDataReadOnlyCellComponent<TYPE> {
   @Input() public property: ReadOnlyProperty<TYPE>;
   @Input() public model: TYPE;
   @Input() public inComplex: boolean;
+  @Input() public inComplexTable: boolean;
   @Input() public labelCol;
   @Input() public inputCol;
   @Input() public label;
@@ -17,7 +18,7 @@ export class CuiDataReadOnlyCellComponent<TYPE> {
   constructor(private sanitizer: DomSanitizer) {}
 
   public ResolveControlClass(): string {
-    if (this.inComplex) {
+    if (this.inComplex && !this.inComplexTable) {
       return 'input-group col-' + this.inputCol;
     } else {
       return ''
@@ -25,7 +26,7 @@ export class CuiDataReadOnlyCellComponent<TYPE> {
   }
 
   public ResolveLabelClass(): string {
-    if (this.inComplex) {
+    if (this.inComplex && !this.inComplexTable) {
       return 'col-' + this.labelCol
     } else {
       return ''
@@ -33,7 +34,7 @@ export class CuiDataReadOnlyCellComponent<TYPE> {
   }
 
   public ResolveGroupClass(): string {
-    if (this.inComplex) {
+    if (this.inComplex && !this.inComplexTable) {
       return 'row pb-1'
     } else {
       return ''

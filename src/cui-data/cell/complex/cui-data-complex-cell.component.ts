@@ -6,12 +6,20 @@ import {DefaultViewComplexCellComponent} from "./default-view-complex-cell.compo
 
 @Component({
   selector: 'cui-data-complex-cell',
-  template: `
-    <a href="#" (click)="OpenDialog(template)">{{ResolveLabel()}}</a>
-    <ng-template #template>
-        <dynamic-container [componentClass]="property.inputConfig.complex.componentView"
-                           [data]="GetData()"
-        ></dynamic-container>
+  template: `    
+    <div *ngIf="inTable; else notInTable">
+        <table-view-complex-cell [property]="property" [model]="model" [value]="value" [changedByUser]="changedByUser">
+            
+        </table-view-complex-cell>
+    </div>
+    
+    <ng-template #notInTable>
+      <a href="#" (click)="OpenDialog(template)">{{ResolveLabel()}}</a>
+      <ng-template #template>
+          <dynamic-container [componentClass]="property.inputConfig.complex.componentView"
+                             [data]="GetData()"
+          ></dynamic-container>
+      </ng-template>
     </ng-template>
   `,
 })
@@ -24,6 +32,8 @@ export class CuiDataComplexCellComponent<TYPE> implements OnInit {
 
   @Input() public inComplex: boolean;
 
+  @Input() public inTable: boolean;
+
   @Output() public changedByUser = new EventEmitter<any>();
 
   public modalRef: BsModalRef;
@@ -31,6 +41,12 @@ export class CuiDataComplexCellComponent<TYPE> implements OnInit {
   constructor(private modalService: BsModalService, public cuiModelHelper: CuiModelHelper) {}
 
   ngOnInit(): void {
+    if (this.inTable === undefined) {
+      this.inTable = false;
+    } else {
+      return;
+    }
+
     if (this.property.inputConfig.complex.componentView === undefined) {
       this.property.inputConfig.complex.componentView = DefaultViewComplexCellComponent;
     }

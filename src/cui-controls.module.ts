@@ -44,6 +44,7 @@ import {DecimalDirective} from "./directives/comma-to-point/comma-to-point.direc
 import {TelephoneDirective} from "./directives/telephone/telephone.directive";
 import {DynamicContainerComponent} from "./cui-data/dynamic-container/dynamic-container.component";
 import {CuiDataTableAsyncComponent} from './cui-data';
+import {TableViewComplexCellComponent} from './cui-data/cell/complex/table-view-complex-cell.component';
 
 @NgModule({
     imports: [
@@ -85,6 +86,7 @@ import {CuiDataTableAsyncComponent} from './cui-data';
         CuiOlRectangleSelectComponent,
         CuiDataComplexCellComponent,
         DefaultViewComplexCellComponent,
+        TableViewComplexCellComponent,
         CuiDataTableSimpleCellComponent,
         CuiDataEditableCellComponent,
         CuiDataReadOnlyCellComponent,
@@ -122,6 +124,7 @@ import {CuiDataTableAsyncComponent} from './cui-data';
         CuiEmailControlComponent,
         CuiDataComplexCellComponent,
         DefaultViewComplexCellComponent,
+        TableViewComplexCellComponent,
         CuiDataTableSimpleCellComponent,
         CuiDataEditableCellComponent,
         CuiDataReadOnlyCellComponent,
