@@ -429,10 +429,6 @@ export class CuiDataTableAsyncComponent<TYPE> implements DataTable<TYPE>, OnChan
   }
 
   ResolveUnitPostfix(property: Property<TYPE>) {
-    if (!property.is_editable) {
-      return '';
-    }
-
     if (!property.inputConfig || !property.inputConfig.unitName) {
       return '';
     }
