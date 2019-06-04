@@ -10,33 +10,25 @@ import {CuiModelHelper} from "../../../services/cui/cui.helper";
             <table class="table table-responsive-md">
                 <tbody>
                     <tr *ngFor="let innerProperty of property.inputConfig.complex.innerProperties(model)">
-                        <div *ngIf="innerProperty.is_editable">
-                            <td class="border col-3 p-2">
-                                <label><strong>{{ResolveLabel(innerProperty)}}</strong></label>
-                            </td>
-                            <td class="border col-9">
-                                <cui-data-editable-cell [property]="innerProperty"
-                                                        [value]="cuiModelHelper.GetModelValue(model, innerProperty.key)"
-                                                        [model]="model"
-                                                        (changedByUser)="EmitChangedByUser($event, innerProperty.key)"
-                                >
-                                </cui-data-editable-cell>
-                            </td>
-                        </div>
-          
-                        <div *ngIf="!innerProperty.is_editable">
-                            <td class="border col-3 p-2">
-                                <label><strong>{{ResolveLabel(innerProperty)}}</strong></label>
-                            </td>
-                            <td class="border col-9">
-                                <cui-data-read-only-cell [property]="innerProperty"
-                                                         [model]="model"
-                                                         [inComplex]="true"
-                                                         [inComplexTable]="true"
-                                >
-                                </cui-data-read-only-cell>
-                            </td>
-                        </div>
+                        <td class="border col-3 p-2">
+                            <label><strong>{{ResolveLabel(innerProperty)}}</strong></label>
+                        </td>
+                        <td class="border col-9" *ngIf="innerProperty.is_editable">
+                            <cui-data-editable-cell [property]="innerProperty"
+                                                    [value]="cuiModelHelper.GetModelValue(model, innerProperty.key)"
+                                                    [model]="model"
+                                                    (changedByUser)="EmitChangedByUser($event, innerProperty.key)"
+                            >
+                            </cui-data-editable-cell>
+                        </td>
+                        <td class="border col-9" *ngIf="!innerProperty.is_editable">
+                            <cui-data-read-only-cell [property]="innerProperty"
+                                                     [model]="model"
+                                                     [inComplex]="true"
+                                                     [inComplexTable]="true"
+                            >
+                            </cui-data-read-only-cell>
+                        </td>
                     </tr>
                 </tbody>
             </table>
