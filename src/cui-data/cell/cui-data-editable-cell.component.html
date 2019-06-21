@@ -47,6 +47,23 @@
 
 </cui-text-control>
 
+<cui-textarea-control *ngIf="property.inputType === 'textarea'"
+                      [key]="property.key"
+                      [value]="value"
+                      [label]=ResolveLabel()
+                      [controlClass]=ResolveControlClass()
+                      [groupClass]=ResolveGroupClass()
+                      [labelClass]=ResolveLabelClass()
+                      [unitName]="property.inputConfig ? property.inputConfig.unitName : null"
+                      (changedByUser)="ChangeByUser($event)"
+                      [validations]="property.validations"
+                      #cuiInput
+                      [isDisabled]="IsDisabledProperty(property, model)"
+                      [errorMessageInTooltip]="true"
+>
+
+</cui-textarea-control>
+
 <cui-decimal-control *ngIf="property.inputType === 'decimal'"
                      [key]="property.key"
                      [value]="value"

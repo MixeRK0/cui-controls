@@ -45,6 +45,7 @@ import {TelephoneDirective} from "./directives/telephone/telephone.directive";
 import {DynamicContainerComponent} from "./cui-data/dynamic-container/dynamic-container.component";
 import {CuiDataTableAsyncComponent} from './cui-data';
 import {TableViewComplexCellComponent} from './cui-data/cell/complex/table-view-complex-cell.component';
+import {CuiTextareaControlComponent} from './cui-control/textarea/cui-textarea-control.component';
 
 @NgModule({
     imports: [
@@ -60,6 +61,7 @@ import {TableViewComplexCellComponent} from './cui-data/cell/complex/table-view-
     declarations: [
         CuiControlComponent,
         CuiTextControlComponent,
+        CuiTextareaControlComponent,
         CuiCheckboxControlComponent,
         CuiFileControlComponent,
         CuiDecimalControlComponent,
@@ -102,6 +104,7 @@ import {TableViewComplexCellComponent} from './cui-data/cell/complex/table-view-
     exports: [
         CuiControlComponent,
         CuiTextControlComponent,
+        CuiTextareaControlComponent,
         CuiCheckboxControlComponent,
         CuiFileControlComponent,
         CuiDecimalControlComponent,

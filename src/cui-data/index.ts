@@ -6,6 +6,7 @@ import {ComponentForDynamicInsert} from "./dynamic-container/dynamic-container.c
 import {CoordinateReferenceSystem} from "../cui-control/ol/line/cui-ol-line-control.component";
 export * from './table-async/cui-data-table-async.component';
 export type TEXT_ELEMENT = 'text';
+export type TEXTAREA_ELEMENT = 'textarea';
 export type DECIMAL_ELEMENT = 'decimal';
 export type SWITCH_ELEMENT = 'switch';
 export type SELECT_ELEMENT = 'select';
@@ -28,6 +29,7 @@ export type Coordinate = [number, number, number | undefined]
 
 export type INPUT_TYPE =
   TEXT_ELEMENT |
+  TEXTAREA_ELEMENT |
   DECIMAL_ELEMENT |
   SWITCH_ELEMENT |
   SELECT_ELEMENT |
