@@ -86,7 +86,8 @@ export interface DataTableConfig<TYPE> {
   isDisableRefresh?: boolean,
   isEnableSort?: boolean,
   saveAfterAddNew?: boolean,
-  isDisableAdding?: boolean
+  isDisableAdding?: boolean,
+  isDisableDeleting?: boolean
 }
 
 const CLOSED = 'closed';
@@ -349,7 +350,7 @@ export class CuiDataTableAsyncComponent<TYPE> implements DataTable<TYPE>, OnChan
   }
 
   IsAvailableDelete(): boolean {
-    return this.config.deleteFunction !== undefined;
+    return !this.config.isDisableDeleting && this.config.deleteFunction !== undefined;
   }
 
   IsAvailableComplexUpdate(): boolean {
