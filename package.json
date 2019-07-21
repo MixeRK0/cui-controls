@@ -1,6 +1,6 @@
 {
   "name": "cui-controls",
-  "version": "6.0.16",
+  "version": "6.1.1",
   "dependencies": {
     "@angular/common": "^6.0.9",
     "@angular/core": "^6.0.9",
@@ -9,7 +9,6 @@
     "@angular/router": "^6.0.9",
     "@ng-select/ng-select": "^2.6.0",
     "ngx-bootstrap": "^3.0.1",
-    "node-sass": "^4.12.0",
     "ol": "5.0.0",
     "proj4": "^2.4.4",
     "rxjs": "6.0.0"
@@ -18,7 +17,8 @@
   "devDependencies": {
     "@angular/compiler": "6.0.9",
     "@angular/compiler-cli": "6.0.9",
-    "typescript": "2.7.2"
+    "typescript": "2.7.2",
+    "node-sass": "^4.12.0"
   },
   "scripts": {
     "scss": "node-sass --watch src/scss -o src/css"
