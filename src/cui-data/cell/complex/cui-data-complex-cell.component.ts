@@ -15,11 +15,14 @@ import {DefaultViewComplexCellComponent} from "./default-view-complex-cell.compo
     
     <ng-template #notInTable>
       <a href="#" (click)="OpenDialog(template)">{{ResolveLabel()}}</a>
-      <ng-template #template>
-          <dynamic-container [componentClass]="property.inputConfig.complex.componentView"
-                             [data]="GetData()"
-          ></dynamic-container>
-      </ng-template>
+      <div bsModal #template="bs-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" style="width: 1200px !important;">
+            <dynamic-container class="modal-content"
+                               [componentClass]="property.inputConfig.complex.componentView"
+                               [data]="GetData()"
+            ></dynamic-container>
+        </div>
+      </div>
     </ng-template>
   `,
 })
@@ -60,13 +63,8 @@ export class CuiDataComplexCellComponent<TYPE> implements OnInit {
     this.changedByUser.emit(value);
   }
 
-  OpenDialog(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(
-      template,
-      {
-        keyboard: true
-      }
-    );
+  OpenDialog(template) {
+    this.modalRef = template.show();
 
     return false;
   }

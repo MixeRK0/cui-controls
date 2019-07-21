@@ -85,7 +85,8 @@ export interface DataTableConfig<TYPE> {
   enableSummaryInfo?: boolean,
   isDisableRefresh?: boolean,
   isEnableSort?: boolean,
-  saveAfterAddNew?: boolean
+  saveAfterAddNew?: boolean,
+  isDisableAdding?: boolean
 }
 
 const CLOSED = 'closed';
@@ -336,7 +337,7 @@ export class CuiDataTableAsyncComponent<TYPE> implements DataTable<TYPE>, OnChan
   }
 
   IsAvailableAdd(): boolean {
-    return this.config.newItem !== undefined || this.config.addUrl !== undefined;
+    return !this.config.isDisableAdding && (this.config.newItem !== undefined || this.config.addUrl !== undefined);
   }
 
   IsAvailableSave(): boolean {
