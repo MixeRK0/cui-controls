@@ -86,7 +86,7 @@ export interface DataTableConfig<TYPE> {
   isDisableRefresh?: boolean,
   isEnableSort?: boolean,
   saveAfterAddNew?: boolean,
-  isDisableAdding?: boolean
+  isDisableAdding?: ((item: TYPE) => boolean)
 }
 
 const CLOSED = 'closed';
