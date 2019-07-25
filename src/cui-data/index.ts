@@ -77,6 +77,8 @@ export interface BaseProperty<TYPE> {
       componentForOptionGroups?: ComponentForDynamicInsert,
       componentForLabel?: ComponentForDynamicInsert,
       isMultiple?: boolean,
+      isHideSelectedOptions?: boolean,
+      isShowAll?: boolean,
     },
     typeahead?: {
       dataSource: ((searchString: string) => Observable<any[]>),

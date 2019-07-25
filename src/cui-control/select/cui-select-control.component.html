@@ -12,6 +12,7 @@
                [ngClass]="inputClass"
                [disabled]="isDisabled"
                [multiple]="isMultiple"
+               [hideSelected]="isHideSelectedOptions"
     >
       <ng-template ng-option-tmp let-item="item" let-index="index" let-search="searchTerm">
         <div *ngIf="!componentForOptions">
@@ -46,7 +47,7 @@
         </dynamic-container>
       </ng-template>
 
-      <ng-template ng-multi-label-tmp let-items="items" let-clear="clear" *ngIf="isMultiple">
+      <ng-template ng-multi-label-tmp let-items="items" let-clear="clear" *ngIf="isMultiple && !isShowAll">
         <div class="ng-value" *ngFor="let item of (items ? items.slice(0, isClosedMore ? 4 : undefined): [])">
           <span class="ng-value-label">{{item.label}}</span>
           <span class="ng-value-icon right" (click)="clear(item)" aria-hidden="true">×</span>
@@ -56,6 +57,13 @@
         </div>
         <div class="ng-value" *ngIf="items.length > 4 && !isClosedMore" (click)="isClosedMore = true">
           <span class="ng-value-label">свернуть ...</span>
+        </div>
+      </ng-template>
+
+      <ng-template ng-multi-label-tmp let-items="items" let-clear="clear" *ngIf="isMultiple && isShowAll">
+        <div class="ng-value" *ngFor="let item of items.slice(0, undefined)">
+          <span class="ng-value-label">{{item.label}}</span>
+          <span class="ng-value-icon right" (click)="clear(item)" aria-hidden="true">×</span>
         </div>
       </ng-template>
     </ng-select>

@@ -20,6 +20,8 @@ export interface IOption {
 export class CuiSelectControlComponent extends CuiControlComponent implements OnInit {
   @Input() public options: Observable<IOption[]> = of([]);
   @Input() public isMultiple: boolean;
+  @Input() public isHideSelectedOptions: boolean;
+  @Input() public isShowAll: boolean;
 
   @Input() public componentForOptions: ComponentForDynamicInsert;
   @Input() public componentForOptionGroups: ComponentForDynamicInsert;
