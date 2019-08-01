@@ -6,7 +6,14 @@ import {CuiTelephoneControlComponent} from "./cui-control/telephone/cui-telephon
 import {FormBuilder, FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {CuiOlPolygonSelectComponent} from "./cui-control/ol/polygon/select/cui-ol-polygon-select.component";
 import {CuiTextControlComponent} from "./cui-control/text/cui-text-control.component";
-import {BsModalService, ModalModule, PaginationModule, TooltipModule, TypeaheadModule} from "ngx-bootstrap";
+import {
+    BsModalService,
+    ModalModule,
+    PaginationModule,
+    ProgressbarModule,
+    TooltipModule,
+    TypeaheadModule
+} from "ngx-bootstrap";
 import {CuiOlRectangleSelectComponent} from "./cui-control/ol/rectangle/select/cui-ol-rectangle-select.component";
 import {CuiOlPolygonSpecialControlComponent} from "./cui-control/ol/polygon-special/cui-ol-polygon-special-control.component";
 import {CuiCheckboxControlComponent} from "./cui-control/checkbox/cui-checkbox-control.component";
@@ -46,6 +53,7 @@ import {DynamicContainerComponent} from "./cui-data/dynamic-container/dynamic-co
 import {CuiDataTableAsyncComponent} from './cui-data';
 import {TableViewComplexCellComponent} from './cui-data/cell/complex/table-view-complex-cell.component';
 import {CuiTextareaControlComponent} from './cui-control/textarea/cui-textarea-control.component';
+import {CuiProgressbarControlComponent} from './cui-control/progressbar/cui-progressbar-control.component';
 
 @NgModule({
     imports: [
@@ -56,7 +64,8 @@ import {CuiTextareaControlComponent} from './cui-control/textarea/cui-textarea-c
         ModalModule.forRoot(),
         TooltipModule.forRoot(),
         NgSelectModule,
-        PaginationModule.forRoot()
+        PaginationModule.forRoot(),
+        ProgressbarModule.forRoot()
     ],
     declarations: [
         CuiControlComponent,
@@ -73,6 +82,7 @@ import {CuiTextareaControlComponent} from './cui-control/textarea/cui-textarea-c
         CuiTimepickerControlComponent,
         CuiTypeaheadControlComponent,
         CuiTypeaheadNewControlComponent,
+        CuiProgressbarControlComponent,
         CuiOlPointControlComponent,
         CuiOlPointSelectComponent,
         CuiOlPointSpecialControlComponent,
@@ -116,6 +126,7 @@ import {CuiTextareaControlComponent} from './cui-control/textarea/cui-textarea-c
         CuiTimepickerControlComponent,
         CuiTypeaheadControlComponent,
         CuiTypeaheadNewControlComponent,
+        CuiProgressbarControlComponent,
         CuiOlPointControlComponent,
         CuiOlPointSpecialControlComponent,
         CuiOlLineControlComponent,

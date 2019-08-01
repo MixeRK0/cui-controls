@@ -12,6 +12,7 @@ export type SWITCH_ELEMENT = 'switch';
 export type SELECT_ELEMENT = 'select';
 export type SELECT_TYPEAHEAD = 'typeahead';
 export type SELECT_TYPEAHEAD_NEW = 'typeahead_new';
+export type PROGRESSBAR = 'progressbar';
 export type DATE_PICKER_ELEMENT = 'date_picker';
 export type COMPLEX_ELEMENT = 'complex';
 export type TIME_PICKER_ELEMENT = 'time_picker';
@@ -35,6 +36,7 @@ export type INPUT_TYPE =
   SELECT_ELEMENT |
   SELECT_TYPEAHEAD |
   SELECT_TYPEAHEAD_NEW |
+  PROGRESSBAR |
   COMPLEX_ELEMENT |
   DATE_PICKER_ELEMENT |
   TIME_PICKER_ELEMENT |
@@ -94,6 +96,14 @@ export interface BaseProperty<TYPE> {
       componentForOptionGroups?: ComponentForDynamicInsert,
       componentForLabel?: ComponentForDynamicInsert,
     },
+    progressbar?: {
+      barLabel: (item: TYPE) => string,
+      type?: (item: TYPE) => string,
+      max?: (item: TYPE) => number,
+      isShowBarLabel?: boolean,
+      isStriped?: boolean,
+      isAnimate?: boolean
+    },
     complex?: {
       innerProperties: (item: TYPE) => Property<TYPE>[],
       labelCol?: colValues,
@@ -104,7 +114,7 @@ export interface BaseProperty<TYPE> {
     },
     mapData?: {
       CRS: (item: TYPE) => CoordinateReferenceSystem,
-    }
+    },
     table?: {
       config: SimpleDataTableCellConfig<any>,
       isWithoutLabel?: boolean,
