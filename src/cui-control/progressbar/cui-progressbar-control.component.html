@@ -7,7 +7,7 @@
                      [animate]="isAnimate"
                      [max]="max"
         >
-            <label *ngIf="isShowBarLabel">{{barLabel}}</label>
+            <span *ngIf="isShowBarLabel" style="color: black">{{barLabel}}</span>
         </progressbar>
         <div class="invalid-feedback text-left" *ngIf="!errorMessageInTooltip">
             {{GetErrorMessage()}}
