@@ -65,11 +65,11 @@ cui-data-table-async table tr.expanded-row {
   cui-data-table-async table tr.expanded-row td.col-in-expanded-row {
     padding: 0.5rem !important; }
   cui-data-table-async table tr.expanded-row tr.expanded-row {
-    background-color: rgba(200, 200, 200, 0.5); }
+    background-color: rgba(200, 200, 200, 0.3); }
     cui-data-table-async table tr.expanded-row tr.expanded-row tr.expanded-row {
-      background-color: rgba(200, 200, 200, 0.7); }
+      background-color: rgba(200, 200, 200, 0.4); }
       cui-data-table-async table tr.expanded-row tr.expanded-row tr.expanded-row tr.expanded-row {
-        background-color: rgba(200, 200, 200, 0.9); }
+        background-color: rgba(200, 200, 200, 0.5); }
 
 .table .table {
   background-color: #ffffff; }
