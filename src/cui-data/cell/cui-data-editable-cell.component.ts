@@ -1,8 +1,6 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {EditableProperty} from '../index';
 import {Observable} from 'rxjs';
-import {async} from 'rxjs/internal/scheduler/async';
-import {of} from 'rxjs/internal/observable/of';
 import {IOption} from "../../cui-control/select/cui-select-control.component";
 import {CuiModelHelper} from "../../services/cui/cui.helper";
 import {CuiControlComponent} from "../../cui-control/cui-control.component";

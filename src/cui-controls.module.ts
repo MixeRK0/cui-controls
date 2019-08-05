@@ -54,6 +54,8 @@ import {CuiDataTableAsyncComponent} from './cui-data';
 import {TableViewComplexCellComponent} from './cui-data/cell/complex/table-view-complex-cell.component';
 import {CuiTextareaControlComponent} from './cui-control/textarea/cui-textarea-control.component';
 import {CuiProgressbarControlComponent} from './cui-control/progressbar/cui-progressbar-control.component';
+import {CuiDataTableComponent} from './cui-data/table/cui-data-table.component';
+import {CuiDataViewComponent} from './cui-data/view/cui-data-view.component';
 
 @NgModule({
     imports: [
@@ -102,6 +104,8 @@ import {CuiProgressbarControlComponent} from './cui-control/progressbar/cui-prog
         CuiDataTableSimpleCellComponent,
         CuiDataEditableCellComponent,
         CuiDataReadOnlyCellComponent,
+        CuiDataTableComponent,
+        CuiDataViewComponent,
         CuiDataTableAsyncComponent,
         ExpandComponentDirective,
         ExpandedRowComponent,
@@ -142,6 +146,8 @@ import {CuiProgressbarControlComponent} from './cui-control/progressbar/cui-prog
         CuiDataTableSimpleCellComponent,
         CuiDataEditableCellComponent,
         CuiDataReadOnlyCellComponent,
+        CuiDataTableComponent,
+        CuiDataViewComponent,
         CuiDataTableAsyncComponent,
         DecimalDirective,
         CuiPasswordValidatorDirective,
