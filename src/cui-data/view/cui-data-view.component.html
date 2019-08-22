@@ -11,6 +11,7 @@
         <div *ngIf="property.is_editable" class="td-content">
           <cui-data-editable-cell [property]="property"
                                   [value]="cuiModelHelper.GetModelValue(model, property.key)"
+                                  (changedByUser)="cuiModelHelper.SetModelValue(this.model, property.key, $event)"
                                   [model]="model">
           </cui-data-editable-cell>
         </div>

@@ -1,12 +1,12 @@
 <div class="row">
     <label class="col-12 pt-1 pl-0" *ngIf="!IsWithoutLabel">{{label}}</label>
-    <div class="col-12 p-0">
+    <div [ngClass]="isResponsiveTable ? 'col-12 p-0 table-responsive' : 'col-12 p-0'">
         <table class="table table-responsive-md">
             <tr>
                 <th *ngFor="let property of config.properties" [width]="property.width" class="p-2 border">
                     {{property.label + ResolveUnitPostfix(property)}}
                 </th>
-                <th class="p-2 border" *ngIf="isEditable && list.length > 0">&nbsp;</th>
+                <th class="p-2 border" *ngIf="isEditable && !config.isDisableDeleting && list.length > 0">&nbsp;</th>
             </tr>
             <ng-template [ngIf]="list && list.length > 0" [ngIfElse]="emtyRow">
                 <ng-template ngFor let-item [ngForOf]="list" let-i="index">
@@ -31,7 +31,7 @@
                             </div>
                         </td>
 
-                        <td class="button-cell border p-0 mt-1" *ngIf="isEditable">
+                        <td class="button-cell border p-0 mt-1" *ngIf="isEditable && !config.isDisableDeleting">
                             <button
                                     [title]="'Удалить'"
                                     [class]="'btn btn-danger icon icon-trash btn-sm'"

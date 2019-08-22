@@ -9,7 +9,12 @@ export interface DataViewConfig<TYPE> {
   spawnModel: (id) => Observable<TYPE>,
   updateFunction?: ((item: TYPE) => Observable<TYPE>),
   deleteFunction?: ((item: TYPE) => Observable<TYPE>),
-  isDisableSave?: boolean
+  isDisableSave?: boolean,
+  isDisableDelete?: boolean,
+  isUseCustomUpdateFunction?: boolean,
+  isUseCustomDeleteFunction?: boolean,
+  customUpdateFunction?: ((item: TYPE) => Observable<TYPE>)
+  customDeleteFunction?: ((item: TYPE) => Observable<TYPE>)
 }
 
 @Component({
@@ -26,9 +31,14 @@ export class CuiDataViewComponent<TYPE> implements OnChanges {
 
   public model: TYPE;
 
-  public get isEditable() { return this.config.updateFunction !== undefined; };
+  public get isEditable() {
+    return this.config.updateFunction !== undefined || this.config.customUpdateFunction !== undefined;
+  };
 
-  public get isAvailableDelete() { return this.config.deleteFunction !== undefined; };
+  public get isAvailableDelete() {
+    return !this.config.isDisableDelete
+      && (this.config.deleteFunction !== undefined || this.config.customDeleteFunction !== undefined);
+  };
 
   constructor(public cuiModelHelper: CuiModelHelper) {}
 
@@ -41,15 +51,23 @@ export class CuiDataViewComponent<TYPE> implements OnChanges {
   }
 
   SaveModel(item: TYPE) {
-    this.config.updateFunction(item).subscribe(
-      result => {
-        console.log('Success', result);
-      },
-      error => console.error('Error', error)
-    )
+    if (this.config.isUseCustomUpdateFunction) {
+      this.config.customUpdateFunction(item);
+    } else {
+      this.config.updateFunction(item).subscribe(
+        result => {
+          console.log('Success', result);
+        },
+        error => console.error('Error', error)
+      )
+    }
   }
 
   DeleteModel(item: TYPE) {
-    this.config.deleteFunction(item).subscribe();
+    if (this.config.isUseCustomDeleteFunction) {
+      this.config.customDeleteFunction(item);
+    } else {
+      this.config.deleteFunction(item).subscribe();
+    }
   }
 }

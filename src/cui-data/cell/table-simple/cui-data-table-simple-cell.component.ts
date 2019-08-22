@@ -7,6 +7,7 @@ export interface SimpleDataTableCellConfig<TYPE> {
   data: (item: any) => Array<TYPE>,
   newItem?: () => TYPE,
   context?: (item: TYPE) => any,
+  isDisableDeleting?: boolean
 }
 
 @Component({
@@ -35,6 +36,8 @@ export class CuiDataTableSimpleCellComponent<TYPE> implements OnInit {
   @Input() public IsWithoutLabel = false;
 
   @Input() public isNeedUnitLabelForHeaders;
+
+  @Input() public isResponsiveTable;
 
   @Output() public changedByUser = new EventEmitter<any>();
 
