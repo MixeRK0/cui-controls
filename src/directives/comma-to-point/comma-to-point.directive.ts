@@ -30,6 +30,11 @@ export class DecimalDirective {
         result += currentChar;
       }
     }
+
+    if (result[0] === '.') {
+      result = '0' + result
+    }
+
     return result;
   }
 
