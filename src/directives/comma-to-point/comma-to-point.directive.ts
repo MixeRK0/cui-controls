@@ -16,19 +16,26 @@ export class DecimalDirective {
 
   transform(value: string): string {
     let result = '';
-    let isPointInResult;
+    let isPointInResult = false;
     for (const currentChar of value) {
       const currentCharCode = currentChar.charCodeAt(0);
+
       if (result.length === 0 && currentCharCode === ASCII.CHAR_MINUS) {
         result = '-';
-      } else if (!ASCII.isDigit(currentCharCode)) {
+
+        continue;
+      }
+
+      if (!ASCII.isDigit(currentCharCode)) {
         if (!isPointInResult && (currentCharCode === ASCII.CHAR_POINT || currentCharCode === ASCII.CHAR_COMA)) {
           result += '.';
           isPointInResult = true;
         }
-      } else {
-        result += currentChar;
+
+        continue;
       }
+
+      result += currentChar;
     }
 
     if (result[0] === '.') {
