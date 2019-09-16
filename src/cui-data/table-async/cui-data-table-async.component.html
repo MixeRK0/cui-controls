@@ -140,7 +140,7 @@
               <td class="button-cell border">
                 <button [title]="button.title"
                         [class]="button.class + ' btn-sm'"
-                        [disabled]="isLoadingRows"
+                        [disabled]="button.isDisabled ? isLoadingRows || button.isDisabled(item) : isLoadingRows"
                         (click)="button.action(item, list, this)"
                 >
                 </button>

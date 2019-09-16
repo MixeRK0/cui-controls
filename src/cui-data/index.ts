@@ -62,6 +62,7 @@ export interface Button<TYPE> {
   title: string,
   action: ((item: TYPE, list: TYPE[], dataTable: DataTable<TYPE>) => any),
   class?: string
+  isDisabled?: (item: TYPE) => boolean
 }
 
 export interface BaseProperty<TYPE> {
