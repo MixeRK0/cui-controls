@@ -51,6 +51,7 @@ export class DefaultViewComplexCellComponent<TYPE> implements ComponentForDynami
   public model: TYPE;
   public value: any;
   public modalRef: any;
+  public isChangedByUserOnModalHide: boolean;
 
   public changedByUser = (value: any) => {
   };
@@ -60,17 +61,25 @@ export class DefaultViewComplexCellComponent<TYPE> implements ComponentForDynami
     this.model = data['model'];
     this.modalRef = data['modalRef'];
     this.changedByUser = data['onChange'];
+    this.isChangedByUserOnModalHide = data['isChangedByUserOnModalHide'];
 
     this.value = this.cuiModelHelper.GetModelValue(<Object>this.model, this.property.key);
   }
 
   HideModal() {
+    if (this.isChangedByUserOnModalHide) {
+      this.changedByUser(this.cuiModelHelper.GetModelValue(<Object>this.model, this.property.key));
+    }
+
     this.modalRef.hide();
   }
 
   EmitChangedByUser(value: any, key: string) {
     this.cuiModelHelper.SetModelValue(<Object>this.model, key, value);
-    this.changedByUser(this.cuiModelHelper.GetModelValue(<Object>this.model, this.property.key));
+
+    if (this.isChangedByUserOnModalHide === false) {
+      this.changedByUser(this.cuiModelHelper.GetModelValue(<Object>this.model, this.property.key));
+    }
   }
 
   constructor(public cuiModelHelper: CuiModelHelper) {

@@ -34,6 +34,8 @@ export class CuiDataComplexCellComponent<TYPE> implements OnInit {
 
   @Input() public inTable: boolean;
 
+  @Input() public isChangedByUserOnModalHide: boolean;
+
   @Output() public changedByUser = new EventEmitter<any>();
 
   public modalRef: BsModalRef;
@@ -76,7 +78,8 @@ export class CuiDataComplexCellComponent<TYPE> implements OnInit {
       property: this.property,
       model: this.model,
       modalRef: this.modalRef,
-      onChange: (value) => this.ChangedByUser(value)
+      onChange: (value) => this.ChangedByUser(value),
+      isChangedByUserOnModalHide: this.isChangedByUserOnModalHide
     };
   }
 

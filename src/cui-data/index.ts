@@ -111,7 +111,8 @@ export interface BaseProperty<TYPE> {
       inputCol?: colValues,
       componentView?: Type<ComponentForDynamicInsert>,
       inTable?: boolean,
-      isNeedUnitInHeader?: boolean
+      isNeedUnitInHeader?: boolean,
+      isChangedByUsedOnModalHide?: boolean
     },
     mapData?: {
       CRS: (item: TYPE) => CoordinateReferenceSystem,
