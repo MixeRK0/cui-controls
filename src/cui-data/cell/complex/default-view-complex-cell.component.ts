@@ -77,7 +77,7 @@ export class DefaultViewComplexCellComponent<TYPE> implements ComponentForDynami
   EmitChangedByUser(value: any, key: string) {
     this.cuiModelHelper.SetModelValue(<Object>this.model, key, value);
 
-    if (this.isChangedByUserOnModalHide === false) {
+    if (this.isChangedByUserOnModalHide !== true) {
       this.changedByUser(this.cuiModelHelper.GetModelValue(<Object>this.model, this.property.key));
     }
   }
