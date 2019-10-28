@@ -6,7 +6,7 @@
                 <th *ngFor="let property of config.properties" [width]="property.width" class="p-2 border">
                     {{property.label + ResolveUnitPostfix(property)}}
                 </th>
-                <th class="p-2 border" *ngIf="isEditable && !config.isDisableDeleting && list.length > 0">&nbsp;</th>
+                <th class="p-2 border" *ngIf="isEditable && !config.isDisableDeleting && list && list.length > 0">&nbsp;</th>
             </tr>
             <ng-template [ngIf]="list && list.length > 0" [ngIfElse]="emtyRow">
                 <ng-template ngFor let-item [ngForOf]="list" let-i="index">

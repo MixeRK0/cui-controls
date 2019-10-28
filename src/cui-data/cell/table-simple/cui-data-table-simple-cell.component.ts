@@ -48,6 +48,8 @@ export class CuiDataTableSimpleCellComponent<TYPE> implements OnInit {
   constructor(public cuiModelHelper: CuiModelHelper) { }
 
   ngOnInit() {
+    this.config.data(this.innerModel);
+
     if (this.isEditable === undefined) {
       this.isEditable = true;
     }
