@@ -4,7 +4,7 @@ import {CuiModelHelper} from "../../../services/cui/cui.helper";
 
 export interface SimpleDataTableCellConfig<TYPE> {
   properties: Property<TYPE>[],
-  data: (item: any) => Array<TYPE>,
+  data?: (item: any) => Array<TYPE>,
   newItem?: () => TYPE,
   context?: (item: TYPE) => any,
   isDisableDeleting?: boolean
@@ -48,7 +48,9 @@ export class CuiDataTableSimpleCellComponent<TYPE> implements OnInit {
   constructor(public cuiModelHelper: CuiModelHelper) { }
 
   ngOnInit() {
-    this.config.data(this.innerModel);
+    if (this.config.data && this.innerModel) {
+      this.config.data(this.innerModel)
+    }
 
     if (this.isEditable === undefined) {
       this.isEditable = true;
