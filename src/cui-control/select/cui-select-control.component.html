@@ -4,7 +4,7 @@
     <ng-select [clearable]="false"
                [closeOnSelect]="!isMultiple"
                [id]="key"
-               [items]="items | async"
+               [items]="options | async"
                bindLabel="label"
                bindValue="value"
                [ngModel]="value"
