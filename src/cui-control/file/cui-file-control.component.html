@@ -1,6 +1,13 @@
-<div class="form-group">
-  <div class="custom-file">
-      <input type="file" class="custom-file-input" id="customFile" (change)="OpenFile($event)">
-      <label class="custom-file-label" for="customFile">{{fileName || 'Выберите файл'}}</label>
-  </div>
+<div [class]="groupClass">
+    <label *ngIf="label" [for]="key" [class]="labelClass">{{label}}</label>
+    <div [class]="controlClass">
+        <input [type]="'file'"
+               [id]="key"
+               (change)="OpenFile($event)"
+               [placeholder]="placeholder"
+               [tabindex]="tabIndex || 0"
+               #input
+               [disabled]="isDisabled"
+        />
+    </div>
 </div>
