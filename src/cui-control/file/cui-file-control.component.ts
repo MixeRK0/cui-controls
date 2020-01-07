@@ -32,9 +32,9 @@ export class CuiFileControlComponent extends CuiControlComponent {
     myReader.onloadend = function (e) {
       const content = myReader.result;
 
-      that.cuiModelHelper.SetModelValue(that.model, that.key, content);
+      that.cuiModelHelper.SetModelValue(that.model, that.key, content.substr(content.indexOf(',') + 1));
     };
 
-    myReader.readAsText(file);
+    myReader.readAsDataURL(file);
   }
 }
