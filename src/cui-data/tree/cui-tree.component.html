@@ -1,0 +1,12 @@
+<tree-root #tree
+  [nodes]="nodes"
+  [options]="options"
+  (activate)="SelectNode($event)"
+>
+    <ng-template #treeNodeTemplate let-node let-index="index" *ngIf="nodeTemplateComponent">
+        <dynamic-container [data]="{item: node}"
+                           [componentClass]="nodeTemplateComponent"
+        >
+        </dynamic-container>
+    </ng-template>
+</tree-root>

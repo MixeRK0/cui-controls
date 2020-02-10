@@ -56,6 +56,9 @@ import {CuiTextareaControlComponent} from './cui-control/textarea/cui-textarea-c
 import {CuiProgressbarControlComponent} from './cui-control/progressbar/cui-progressbar-control.component';
 import {CuiDataTableComponent} from './cui-data/table/cui-data-table.component';
 import {CuiDataViewComponent} from './cui-data/view/cui-data-view.component';
+import {CuiTreeAsyncComponent} from './cui-data/tree-async/cui-tree-async.component';
+import {CuiTreeComponent} from './cui-data/tree/cui-tree.component';
+import {TreeModule} from 'angular-tree-component';
 
 @NgModule({
     imports: [
@@ -67,7 +70,8 @@ import {CuiDataViewComponent} from './cui-data/view/cui-data-view.component';
         TooltipModule.forRoot(),
         NgSelectModule,
         PaginationModule.forRoot(),
-        ProgressbarModule.forRoot()
+        ProgressbarModule.forRoot(),
+        TreeModule
     ],
     declarations: [
         CuiControlComponent,
@@ -113,7 +117,9 @@ import {CuiDataViewComponent} from './cui-data/view/cui-data-view.component';
         CuiPasswordValidatorDirective,
         CuiValidatorDirective,
         TelephoneDirective,
-        DynamicContainerComponent
+        DynamicContainerComponent,
+        CuiTreeAsyncComponent,
+        CuiTreeComponent
     ],
     exports: [
         CuiControlComponent,
@@ -153,7 +159,9 @@ import {CuiDataViewComponent} from './cui-data/view/cui-data-view.component';
         CuiPasswordValidatorDirective,
         CuiValidatorDirective,
         TelephoneDirective,
-        DynamicContainerComponent
+        DynamicContainerComponent,
+        CuiTreeAsyncComponent,
+        CuiTreeComponent
     ],
     providers: [
         FormBuilder,
