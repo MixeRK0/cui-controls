@@ -58,6 +58,37 @@ export class CuiTreeComponent {
     return this.tree.treeModel.getNodeById(id);
   }
 
+  GetNodesByPredicate(predicate: any) {
+    let nodes = [];
+    for (const node of this.tree.treeModel.virtualRoot.children) {
+      if (predicate(node)) {
+        nodes.push(node)
+      }
+
+      if (node.children) {
+        nodes = nodes.concat(this.GetNodesByPredicateInChildren(predicate, node))
+      }
+    }
+
+    return nodes;
+  }
+
+  private GetNodesByPredicateInChildren(predicate: any, parentNode) {
+    let nodes = [];
+
+    for (const child of parentNode.children) {
+      if (predicate(child)) {
+        nodes.push(child)
+      }
+
+      if (child.children) {
+        nodes = nodes.concat(this.GetNodesByPredicateInChildren(predicate, child))
+      }
+    }
+
+    return nodes;
+  }
+
   GetNodeBy (predicate) {
     return this.tree.treeModel.getNodeBy(predicate);
   }

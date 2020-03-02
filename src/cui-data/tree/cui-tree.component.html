@@ -3,6 +3,11 @@
   [options]="options"
   (activate)="SelectNode($event)"
 >
+    <ng-template #treeNodeTemplate let-node let-index="index" *ngIf="!nodeTemplateComponent">
+        <i [class]="node.data.iconClass"></i>
+        <span class="pl-1">{{ node.data.name }}</span>
+    </ng-template>
+
     <ng-template #treeNodeTemplate let-node let-index="index" *ngIf="nodeTemplateComponent">
         <dynamic-container [data]="{item: node}"
                            [componentClass]="nodeTemplateComponent"
