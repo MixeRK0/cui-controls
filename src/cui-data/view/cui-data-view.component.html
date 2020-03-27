@@ -1,5 +1,5 @@
-<table class="table table-bordered" *ngIf="model">
-  <tbody>
+<table class="table table-bordered">
+  <tbody *ngIf="model">
     <tr *ngFor="let property of config.properties">
       <th>{{property.label}}</th>
 
@@ -14,6 +14,27 @@
                                   (changedByUser)="cuiModelHelper.SetModelValue(this.model, property.key, $event)"
                                   [model]="model">
           </cui-data-editable-cell>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+
+  <tbody *ngIf="!model">
+    <tr>
+      <td style="padding: 2% 0 2% 45% !important;">
+        <div class="sk-circle-fade">
+          <div class="sk-circle-fade-dot"></div>
+          <div class="sk-circle-fade-dot"></div>
+          <div class="sk-circle-fade-dot"></div>
+          <div class="sk-circle-fade-dot"></div>
+          <div class="sk-circle-fade-dot"></div>
+          <div class="sk-circle-fade-dot"></div>
+          <div class="sk-circle-fade-dot"></div>
+          <div class="sk-circle-fade-dot"></div>
+          <div class="sk-circle-fade-dot"></div>
+          <div class="sk-circle-fade-dot"></div>
+          <div class="sk-circle-fade-dot"></div>
+          <div class="sk-circle-fade-dot"></div>
         </div>
       </td>
     </tr>

@@ -1,6 +1,6 @@
 {
   "name": "cui-controls",
-  "version": "6.2.3",
+  "version": "6.2.4",
   "dependencies": {
     "@angular/common": "^6.0.9",
     "@angular/core": "^6.0.9",
@@ -15,7 +15,8 @@
     "ngx-bootstrap": "^3.0.1",
     "ol": "5.0.0",
     "proj4": "^2.4.4",
-    "rxjs": "6.0.0"
+    "rxjs": "6.0.0",
+    "spinkit": "^2.0.1"
   },
   "main": "dist/cui-controls.module.js",
   "devDependencies": {

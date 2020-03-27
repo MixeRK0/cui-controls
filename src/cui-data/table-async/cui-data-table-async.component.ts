@@ -371,7 +371,7 @@ export class CuiDataTableAsyncComponent<TYPE> implements DataTable<TYPE>, OnChan
 
   ResolveClasses(itemIndex: number) {
     return {
-      'animated fadeIn border': true,
+      'border': true,
       'new-item table-secondary':
         this.itemProperties[itemIndex]
         && this.itemProperties[itemIndex].is_new,

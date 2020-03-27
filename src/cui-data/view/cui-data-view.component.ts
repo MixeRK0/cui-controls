@@ -43,6 +43,7 @@ export class CuiDataViewComponent<TYPE> implements OnChanges {
   constructor(public cuiModelHelper: CuiModelHelper) {}
 
   ngOnChanges(changes: SimpleChanges): void {
+    this.model = null;
     this.config
       .spawnModel(this.modelId)
       .subscribe(model => {

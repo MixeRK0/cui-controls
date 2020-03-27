@@ -56,7 +56,22 @@
     </tr>
     <ng-template [ngIf]="isLoadingRows" [ngIfElse]="loadedRows">
       <tr>
-        <td class="border" [attr.colspan]="config.properties.length + 1">Загрузка данных...</td>
+        <td class="border" [attr.colspan]="config.properties.length + 1" style="padding: 2% 0 2% 45% !important;">
+          <div class="sk-circle-fade">
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+            <div class="sk-circle-fade-dot"></div>
+          </div>
+        </td>
       </tr>
     </ng-template>
 
