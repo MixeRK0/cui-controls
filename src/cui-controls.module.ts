@@ -59,6 +59,8 @@ import {CuiDataViewComponent} from './cui-data/view/cui-data-view.component';
 import {CuiTreeAsyncComponent} from './cui-data/tree-async/cui-tree-async.component';
 import {CuiTreeComponent} from './cui-data/tree/cui-tree.component';
 import {TreeModule} from 'angular-tree-component';
+import {RouterModule} from '@angular/router';
+import {CuiTabsetComponent} from './cui-data/tabset/cui-tabset.component';
 
 @NgModule({
     imports: [
@@ -71,7 +73,8 @@ import {TreeModule} from 'angular-tree-component';
         NgSelectModule,
         PaginationModule.forRoot(),
         ProgressbarModule.forRoot(),
-        TreeModule
+        TreeModule,
+        RouterModule
     ],
     declarations: [
         CuiControlComponent,
@@ -119,7 +122,8 @@ import {TreeModule} from 'angular-tree-component';
         TelephoneDirective,
         DynamicContainerComponent,
         CuiTreeAsyncComponent,
-        CuiTreeComponent
+        CuiTreeComponent,
+        CuiTabsetComponent
     ],
     exports: [
         CuiControlComponent,
@@ -161,7 +165,8 @@ import {TreeModule} from 'angular-tree-component';
         TelephoneDirective,
         DynamicContainerComponent,
         CuiTreeAsyncComponent,
-        CuiTreeComponent
+        CuiTreeComponent,
+        CuiTabsetComponent
     ],
     providers: [
         FormBuilder,

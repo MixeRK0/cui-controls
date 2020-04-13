@@ -74,6 +74,7 @@ export interface DataTableConfig<TYPE> {
   isResponsive?: boolean,
 
   complexUpdateFunction?: (item: TYPE[]) => Observable<ListAndSummaryData<TYPE>>,
+  complexUpdateFunctionLabel?: string,
   enableSearch?: boolean,
   searchHint?: string,
   spawnData?: (searchString?: string, page?: number, pageSize?: number, sort?: Array<string>) => Observable<ListAndSummaryData<TYPE>>,

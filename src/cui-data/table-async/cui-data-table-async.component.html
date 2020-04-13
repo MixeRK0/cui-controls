@@ -1,4 +1,4 @@
-<div class="row mb-3">
+<div class="row mb-3" *ngIf="config.title || config.additionalData || IsNeedShowPagination()">
   <div class="col-6">
     <p *ngIf="config.title" [class]="'h' + (config.titleLevel ? config.titleLevel : 1)">{{config.title}}</p>
     <div *ngIf="config.additionalData">
@@ -202,7 +202,7 @@
 
     <div class="float-right ml-3">
       <button *ngIf="IsAvailableComplexUpdate()"
-              [title]="'Сохранить все'"
+              [title]="config.complexUpdateFunctionLabel ? config.complexUpdateFunctionLabel : 'Сохранить все'"
               [class]="'btn btn-success btn-block'"
               [disabled]="isLoadingRows"
               (click)="SaveAllModels()"
