@@ -6,6 +6,7 @@ import {CuiControlComponent} from '../../cui-control.component';
 import {CoordinateReferenceSystem} from "../line/cui-ol-line-control.component";
 import {DynamicContainerComponent} from "../../../cui-data/dynamic-container/dynamic-container.component";
 import {CuiModelHelper} from "../../../services/cui/cui.helper";
+import * as ASCII from '../../../services/cui/ascci.helper';
 
 export const Y_KEY = 'y';
 export const X_KEY = 'x';
@@ -75,13 +76,44 @@ export class CuiOlPointSpecialControlComponent extends CuiControlComponent imple
     return this.cuiModelHelper2.GetModelValue(this.model, this.longitudeKey);
   }
 
+  transform(value: string): any {
+    let result = '';
+    let isPointInResult = false;
+    for (const currentChar of value) {
+      const currentCharCode = currentChar.charCodeAt(0);
+
+      if (result.length === 0 && currentCharCode === ASCII.CHAR_MINUS) {
+        result = '-';
+
+        continue;
+      }
+
+      if (!ASCII.isDigit(currentCharCode)) {
+        if (!isPointInResult && (currentCharCode === ASCII.CHAR_POINT || currentCharCode === ASCII.CHAR_COMA)) {
+          result += '.';
+          isPointInResult = true;
+        }
+
+        continue;
+      }
+
+      result += currentChar;
+    }
+
+    if (result[0] === '.') {
+      result = '0' + result
+    }
+
+    return result;
+  }
+
   public SetLatitudeValue(value: any) {
-    this.point.y = value;
+    this.point.y = this.transform(value);
     this.changedByUser.emit(this.point);
   }
 
   public SetLongitudeValue(value: any) {
-    this.point.x = value;
+    this.point.x = this.transform(value);
     this.changedByUser.emit(this.point);
   }
 
