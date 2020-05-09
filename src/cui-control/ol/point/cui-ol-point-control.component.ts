@@ -5,8 +5,8 @@ import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 import {CuiControlComponent} from '../../cui-control.component';
 import {CoordinateReferenceSystem} from "../line/cui-ol-line-control.component";
 import {CuiModelHelper} from "../../../services/cui/cui.helper";
-import {Coordinate} from "../../../cui-data";
 import * as ASCII from '../../../services/cui/ascci.helper';
+import {Coordinate} from '../../../cui-data';
 
 export const Y_KEY = 'y';
 export const X_KEY = 'x';
@@ -27,6 +27,8 @@ export class CuiOlPointControlComponent extends CuiControlComponent implements O
 
   public latitudeKey;
   public longitudeKey;
+
+  public point: {x: number, y: number, z: number} = {x: 0, y: 0, z: 0};
 
   public validationsForSingleProp = [];
 
@@ -59,22 +61,16 @@ export class CuiOlPointControlComponent extends CuiControlComponent implements O
   }
 
   public GetLatitudeValue(): any {
-    if (this.value) {
-      return this.value.y ? this.value.y : 0;
-    } else {
-      return 0;
-    }
+    this.point.y = this.cuiModelHelper2.GetModelValue(this.model, this.latitudeKey);
+    return this.cuiModelHelper2.GetModelValue(this.model, this.latitudeKey);
   }
 
   public GetLongitudeValue(): any {
-    if (this.value) {
-      return this.value.x ? this.value.x : 0;
-    } else {
-      return 0;
-    }
+    this.point.x = this.cuiModelHelper2.GetModelValue(this.model, this.longitudeKey);
+    return this.cuiModelHelper2.GetModelValue(this.model, this.longitudeKey);
   }
 
-  transform(value: string): string {
+  transform(value: string): any {
     let result = '';
     let isPointInResult = false;
     for (const currentChar of value) {
@@ -106,15 +102,13 @@ export class CuiOlPointControlComponent extends CuiControlComponent implements O
   }
 
   public SetLatitudeValue(value: any) {
-    const transformedValue = this.transform(value);
-    this.cuiModelHelper2.SetModelValue(this.model, this.latitudeKey, transformedValue);
-    this.changedByUser.emit(transformedValue);
+    this.point.y = this.transform(value);
+    this.changedByUser.emit(this.point);
   }
 
   public SetLongitudeValue(value: any) {
-    const transformedValue = this.transform(value);
-    this.cuiModelHelper2.SetModelValue(this.model, this.longitudeKey, transformedValue);
-    this.changedByUser.emit(transformedValue);
+    this.point.x = this.transform(value);
+    this.changedByUser.emit(this.point);
   }
 
   public GetLatitudeControlErrors(): ValidationErrors | null {

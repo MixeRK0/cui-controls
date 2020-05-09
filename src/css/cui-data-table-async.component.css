@@ -1,3 +1,11 @@
+cui-data-table-async table cui-ol-point-control.form-control {
+  border: 1px solid #c2cfd6 !important;
+  box-shadow: none !important; }
+
+cui-data-table-async table cui-ol-point-special-control.form-control {
+  border: 1px solid #c2cfd6 !important;
+  box-shadow: none !important; }
+
 cui-data-table-async table .form-control {
   border: none !important;
   box-shadow: none !important; }
