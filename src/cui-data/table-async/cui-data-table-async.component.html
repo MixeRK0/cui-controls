@@ -98,7 +98,7 @@
                 <button
                         *ngIf="IsClosedRow(i)"
                         [title]="'Подробнее'"
-                        [class]="'btn btn-info icon icon-eye btn-sm'"
+                        [class]="'btn btn-info icon icon-arrow-down btn-sm'"
                         [disabled]="isLoadingRows || IsDisabledExpandForRow(item)"
                         (click)="ExpandRow(i)"
                 >
@@ -107,7 +107,7 @@
                 <button
                         *ngIf="IsExpandedRow(i)"
                         [title]="'Скрыть подробную информацию'"
-                        [class]="'btn btn-info icon icon-check btn-sm'"
+                        [class]="'btn btn-info icon icon-arrow-up btn-sm'"
                         [disabled]="isLoadingRows"
                         (click)="CloseRow(i)"
                 >
@@ -189,6 +189,15 @@
     </div>
   </div>
   <div class="col-6">
+    <div class="float-right ml-3" *ngFor="let button of config.underTableButtons">
+      <button [title]="button.title"
+              [class]="button.class"
+              (click)="button.action()"
+      >
+        {{button.title}}
+      </button>
+    </div>
+
     <div class="float-right ml-3">
       <button *ngIf="IsAsync() && !config.isDisableRefresh"
               [title]="'Обновить'"

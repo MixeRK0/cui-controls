@@ -309,6 +309,8 @@
                           [isDisabled]="IsDisabledProperty(property, model)"
                           [errorMessageInTooltip]="true"
                           [CRS]="property.inputConfig.mapData.CRS(model)"
+                          [viewCenter]="property.inputConfig.mapData.viewCenter
+                          ? property.inputConfig.mapData.viewCenter(model) : null"
 >
 
 </cui-ol-rectangle-control>
@@ -330,6 +332,8 @@
                             [model]="model"
                             [value]="value"
                             [label]="property.label"
+                            [mainDivClass]="'p-1'"
+                            [tableClass]="'table table-responsive-md mb-0'"
                             [isEditable]="property.inputConfig.table.isEditable"
                             [IsWithoutLabel]="property.inputConfig.table.isWithoutLabel"
                             [isNeedUnitLabelForHeaders]="property.inputConfig.table.isNeedUnitLabelForHeaders"

@@ -84,6 +84,10 @@ export class CuiDataComplexCellComponent<TYPE> implements OnInit {
   }
 
   ResolveLabel() {
-      return this.inComplex ? this.property.label : 'Редактировать'
+    if (this.property.inputConfig.complex.buttonLabel) {
+      return this.property.inputConfig.complex.buttonLabel;
+    }
+
+    return this.inComplex ? this.property.label : 'Редактировать'
   }
 }

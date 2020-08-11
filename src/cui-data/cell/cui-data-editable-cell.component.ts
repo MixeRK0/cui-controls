@@ -36,7 +36,11 @@ export class CuiDataEditableCellComponent<TYPE> implements OnInit {
 
   public ChangeByUser(value) {
     if (this.property.onUserChange) {
-      this.property.onUserChange(this.model, this.context);
+      this.property.onUserChange(this.model, this.context, value);
+    }
+
+    if (this.property.modifyValue) {
+      value = this.property.modifyValue(this.model, value);
     }
 
     this.changedByUser.emit(value);

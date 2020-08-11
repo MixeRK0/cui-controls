@@ -1,4 +1,4 @@
-import {Component, EventEmitter} from '@angular/core';
+import {Component, EventEmitter, OnInit} from '@angular/core';
 import {ComponentForDynamicInsert} from "../../dynamic-container/dynamic-container.component";
 import {Property} from "../../index";
 import {CuiModelHelper} from "../../../services/cui/cui.helper";
@@ -11,8 +11,8 @@ import {CuiModelHelper} from "../../../services/cui/cui.helper";
       </div>
 
       <div class="modal-body">
-          <div *ngIf="property && model" class="p-4">
-              <div *ngFor="let innerProperty of property.inputConfig.complex.innerProperties(model)" class="item-in-complex">
+          <div *ngIf="property && model && innerProperties" class="p-4">
+              <div *ngFor="let innerProperty of innerProperties" class="item-in-complex">
                   <div class="mb-1" *ngIf="innerProperty.is_editable">
                       <cui-data-editable-cell [property]="innerProperty"
                                               [value]="cuiModelHelper.GetModelValue(model, innerProperty.key)"
@@ -46,12 +46,13 @@ import {CuiModelHelper} from "../../../services/cui/cui.helper";
       </div>
   `
 })
-export class DefaultViewComplexCellComponent<TYPE> implements ComponentForDynamicInsert {
+export class DefaultViewComplexCellComponent<TYPE> implements ComponentForDynamicInsert, OnInit {
   public property: Property<TYPE>;
   public model: TYPE;
   public value: any;
   public modalRef: any;
   public isChangedByUserOnModalHide: boolean;
+  public innerProperties;
 
   public changedByUser = (value: any) => {
   };
@@ -82,6 +83,9 @@ export class DefaultViewComplexCellComponent<TYPE> implements ComponentForDynami
     }
   }
 
-  constructor(public cuiModelHelper: CuiModelHelper) {
+  constructor(public cuiModelHelper: CuiModelHelper) { }
+
+  ngOnInit(): void {
+    this.innerProperties = this.property.inputConfig.complex.innerProperties(this.model);
   }
 }

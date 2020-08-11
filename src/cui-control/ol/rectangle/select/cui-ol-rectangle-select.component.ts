@@ -44,6 +44,7 @@ export class CuiOlRectangleSelectComponent extends CuiControlComponent implement
   @Input() public coordinatesOfRectangle: any;
 
   @Input() public CRS: CoordinateReferenceSystem;
+  @Input() public viewCenter: [number, number];
 
   @Output() public coordinatesOfRectangleChanged = new EventEmitter<any>();
   @Output() public hideModal = new EventEmitter<boolean>();
@@ -219,8 +220,8 @@ export class CuiOlRectangleSelectComponent extends CuiControlComponent implement
       ]),
       layers: [this.baseLayer, this.rectangleLayer],
       view: new View({
-        zoom: 6,
-        center: [0, 0],
+        zoom: 12,
+        center: this.viewCenter ? this.viewCenter : [0, 0],
         projection: this.CRS.code
       })
     });

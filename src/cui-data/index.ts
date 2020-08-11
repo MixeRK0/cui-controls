@@ -65,6 +65,12 @@ export interface Button<TYPE> {
   isDisabled?: (item: TYPE) => boolean
 }
 
+export interface UnderTableButton {
+  title: string,
+  action: () => any,
+  class?: string
+}
+
 export interface BaseProperty<TYPE> {
   label: string,
   width?: number,
@@ -106,6 +112,7 @@ export interface BaseProperty<TYPE> {
       isAnimate?: boolean
     },
     complex?: {
+      buttonLabel?: string,
       innerProperties: (item: TYPE) => Property<TYPE>[],
       labelCol?: colValues,
       inputCol?: colValues,
@@ -116,6 +123,7 @@ export interface BaseProperty<TYPE> {
     },
     mapData?: {
       CRS: (item: TYPE) => CoordinateReferenceSystem,
+      viewCenter?: (item: TYPE) => [number, number],
     },
     table?: {
       config: SimpleDataTableCellConfig<any>,
@@ -142,7 +150,8 @@ export interface EditableProperty<TYPE> extends BaseProperty<TYPE> {
   key: string,
   inputType: INPUT_TYPE,
   validations?: any,
-  onUserChange?: (item: TYPE, context?: any) => void
+  onUserChange?: (item: TYPE, context?: any, value?: any) => void,
+  modifyValue?: (item: TYPE, value?: any) => any
 }
 
 export type Property<TYPE> = EditableProperty<TYPE> | ReadOnlyProperty<TYPE>;

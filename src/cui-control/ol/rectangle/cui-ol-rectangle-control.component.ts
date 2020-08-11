@@ -14,6 +14,7 @@ export class CuiOlRectangleControlComponent extends CuiControlComponent {
   @ViewChildren(NgModel) public inputs: QueryList<NgModel>;
 
   @Input() public CRS: CoordinateReferenceSystem;
+  @Input() public viewCenter: [number, number];
 
   private modalRef: BsModalRef;
 

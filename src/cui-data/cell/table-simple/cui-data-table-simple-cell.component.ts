@@ -5,7 +5,7 @@ import {CuiModelHelper} from "../../../services/cui/cui.helper";
 export interface SimpleDataTableCellConfig<TYPE> {
   properties: Property<TYPE>[],
   data?: (item: any) => Array<TYPE>,
-  newItem?: () => TYPE,
+  newItem?: (item: any) => TYPE,
   context?: (item: TYPE) => any,
   isDisableDeleting?: boolean
 }
@@ -39,6 +39,10 @@ export class CuiDataTableSimpleCellComponent<TYPE> implements OnInit {
 
   @Input() public isResponsiveTable;
 
+  @Input() public mainDivClass = 'row';
+
+  @Input() public tableClass = 'table table-responsive-md';
+
   @Output() public changedByUser = new EventEmitter<any>();
 
   public list = [];
@@ -64,7 +68,7 @@ export class CuiDataTableSimpleCellComponent<TYPE> implements OnInit {
   public ChangedByUser(indexOfItem, value, property: EditableProperty<TYPE>) {
     this.cuiModelHelper.SetModelValue(this.list[indexOfItem], property.key, value);
     if (property.onUserChange) {
-      property.onUserChange(this.model);
+      property.onUserChange(this.list[indexOfItem], this.config.context, value);
     }
 
     this.changedByUser.emit(this.list);
@@ -82,7 +86,7 @@ export class CuiDataTableSimpleCellComponent<TYPE> implements OnInit {
       this.list = [];
     }
 
-    this.list.push(this.config.newItem());
+    this.list.push(this.config.newItem(this.innerModel));
   }
 
   ResolveUnitPostfix(property: Property<TYPE>) {

@@ -1,9 +1,9 @@
 import {
-  ChangeDetectorRef, Component, Input, OnChanges, OnInit, SimpleChanges, Type,
+  ChangeDetectorRef, Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges, Type,
   ViewEncapsulation
 } from '@angular/core';
 import {Observable} from 'rxjs';
-import {Button, DataTable, EditableProperty, Property} from '../index';
+import {Button, DataTable, EditableProperty, Property, UnderTableButton} from '../index';
 import {Router} from '@angular/router';
 import {HttpHeaders, HttpResponse} from '@angular/common/http';
 import {CuiFormHelper} from "../../services/cui/cui-form.helper";
@@ -63,6 +63,7 @@ export interface DataTableConfig<TYPE> {
   titleLevel?: LevelType,
   properties: Property<TYPE>[],
   buttons?: Button<TYPE>[],
+  underTableButtons?: UnderTableButton[],
   form?: (item: TYPE) => { [key: string]: any },
   filterCallback?: ((item: TYPE) => boolean),
   saveFunction?: (item: TYPE) => Observable<TYPE>,
@@ -72,6 +73,7 @@ export interface DataTableConfig<TYPE> {
   addUrl?: any[],
   enableAutoSave?: boolean,
   isResponsive?: boolean,
+  isAutoUpdate?: boolean,
 
   complexUpdateFunction?: (item: TYPE[]) => Observable<ListAndSummaryData<TYPE>>,
   complexUpdateFunctionLabel?: string,
@@ -106,7 +108,7 @@ const SORT_BUTTON_CLASS_NOT_SORTED = 'sorting';
   ],
   encapsulation: ViewEncapsulation.None,
 })
-export class CuiDataTableAsyncComponent<TYPE> implements DataTable<TYPE>, OnChanges, OnInit {
+export class CuiDataTableAsyncComponent<TYPE> implements DataTable<TYPE>, OnChanges, OnInit, OnDestroy {
   @Input() public config: DataTableConfig<TYPE>;
   @Input() public list: TYPE[] = [];
 
@@ -118,6 +120,7 @@ export class CuiDataTableAsyncComponent<TYPE> implements DataTable<TYPE>, OnChan
 
   public searchString: string;
   public isLoadingRows: boolean;
+  public autoUpdateProcess;
   private itemProperties: {
     is_new: boolean,
     is_saved: boolean,
@@ -146,6 +149,16 @@ export class CuiDataTableAsyncComponent<TYPE> implements DataTable<TYPE>, OnChan
 
   ngOnInit(): void {
     this.SetPageAndUpdate(1);
+
+    if (this.config.isAutoUpdate) {
+      this.InitAutoUpdateProcess();
+    }
+  }
+
+  InitAutoUpdateProcess() {
+    this.autoUpdateProcess = setInterval(function () {
+      this.UpdateDataOnPage(true);
+    }.bind(this), 5000);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -194,7 +207,7 @@ export class CuiDataTableAsyncComponent<TYPE> implements DataTable<TYPE>, OnChan
     this.UpdateDataOnPage();
   }
 
-  UpdateDataOnPage() {
+  UpdateDataOnPage(isAuto: boolean = false) {
     if (!this.config) {
       console.warn('Для обновления таблицы необходимо указать настройки таблицы');
 
@@ -207,7 +220,9 @@ export class CuiDataTableAsyncComponent<TYPE> implements DataTable<TYPE>, OnChan
       return;
     }
 
-    this.isLoadingRows = true;
+    if (isAuto === false) {
+      this.isLoadingRows = true;
+    }
     this.changeDetectorRef.detectChanges();
     const dataObservable = this.config.spawnData(
       this.searchString,
@@ -218,7 +233,9 @@ export class CuiDataTableAsyncComponent<TYPE> implements DataTable<TYPE>, OnChan
 
     dataObservable.subscribe(result => {
       this.HandleResult(result);
-      this.isLoadingRows = false;
+      if (isAuto === false) {
+        this.isLoadingRows = false;
+      }
       this.changeDetectorRef.detectChanges();
     });
   }
@@ -565,6 +582,12 @@ export class CuiDataTableAsyncComponent<TYPE> implements DataTable<TYPE>, OnChan
   public RefreshFieldsInItem(item, updatedItem) {
     for (const field in updatedItem) {
       item[field] = updatedItem[field];
+    }
+  }
+
+  public ngOnDestroy(): void {
+    if (this.autoUpdateProcess) {
+      clearInterval(this.autoUpdateProcess)
     }
   }
 }

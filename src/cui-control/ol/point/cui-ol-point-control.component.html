@@ -15,6 +15,7 @@
            decimal
            [validations]="validationsForSingleProp"
            [disabled]="isDisabled"
+           style="border: 1px solid #c2cfd6 !important;"
     />
     <span class="input-group-text">{{'м'}}</span>
     <div class="input-group-prepend">
@@ -31,6 +32,7 @@
            decimal
            [validations]="validationsForSingleProp"
            [disabled]="isDisabled"
+           style="border: 1px solid #c2cfd6 !important;"
     />
     <span class="input-group-text">{{'м'}}</span>
     <div class="m-0">
@@ -40,7 +42,7 @@
               (click)="OpenModalForSelectCoordinatesOnMap(template)"
               [disabled]="isDisabled"
       >
-        Настроить на карте
+        Выбрать на карте
       </button>
       <ng-template #template>
         <cui-ol-point-select-control

@@ -1,7 +1,7 @@
-<div class="row">
+<div [class]=mainDivClass>
     <label class="col-12 pt-1 pl-0" *ngIf="!IsWithoutLabel">{{label}}</label>
     <div [ngClass]="isResponsiveTable ? 'col-12 p-0 table-responsive' : 'col-12 p-0'">
-        <table class="table table-responsive-md">
+        <table [class]=tableClass>
             <tr>
                 <th *ngFor="let property of config.properties" [width]="property.width" class="p-2 border">
                     {{property.label + ResolveUnitPostfix(property)}}
