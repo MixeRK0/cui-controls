@@ -81,7 +81,7 @@ export interface BaseProperty<TYPE> {
     labelCol?: colValues,
     inputCol?: colValues,
     select?: {
-      options?: (item: TYPE) => Observable<IOption[]>,
+      options?: (item: TYPE, context?: any) => Observable<IOption[]>,
       componentForOptions?: ComponentForDynamicInsert,
       componentForOptionGroups?: ComponentForDynamicInsert,
       componentForLabel?: ComponentForDynamicInsert,

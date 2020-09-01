@@ -92,7 +92,7 @@ export class CuiDataEditableCellComponent<TYPE> implements OnInit {
 
   public GetSelectOptions(): Observable<IOption[]> {
     if (this._selectOptions === undefined) {
-      this._selectOptions = this.property.inputConfig.select.options(this.model);
+      this._selectOptions = this.property.inputConfig.select.options(this.model, this.context);
     }
 
     return this._selectOptions;
