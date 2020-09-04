@@ -23,7 +23,7 @@
     "@angular/compiler": "6.0.9",
     "@angular/compiler-cli": "6.0.9",
     "typescript": "2.7.2",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.13.1"
   },
   "scripts": {
     "scss": "node-sass --watch src/scss -o src/css"
