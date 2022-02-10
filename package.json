@@ -22,7 +22,7 @@
   "devDependencies": {
     "@angular/compiler": "6.0.9",
     "@angular/compiler-cli": "^12.2.11",
-    "node-sass": "^6.0.1",
+    "node-sass": "^7.0.0",
     "typescript": "2.7.2"
   },
   "scripts": {
