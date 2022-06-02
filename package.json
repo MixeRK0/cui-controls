@@ -3,7 +3,7 @@
   "version": "6.3.6",
   "dependencies": {
     "@angular/common": "^6.0.9",
-    "@angular/core": "^6.0.9",
+    "@angular/core": "^11.0.5",
     "@angular/forms": "^6.0.9",
     "@angular/platform-browser": "^6.0.9",
     "@angular/router": "^6.0.9",
